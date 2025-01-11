@@ -313,6 +313,7 @@ export default function Home() {
                 <div className="container mx-auto" >
                     <TypewriterEffect 
                         words = {words} 
+                        className="text-white"
                     />
                     <section id="about" className="relative">
                         <HoverEffect 
