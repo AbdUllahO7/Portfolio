@@ -101,10 +101,10 @@ export default function TechStackSection() {
 
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight text-white">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight text-black dark:text-white">
             Technology Stack
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+          <p className=" text-black dark:text-white max-w-2xl mx-auto text-lg">
             Cutting-edge technologies and tools I use to build exceptional software solutions
           </p>
         </div>
@@ -141,11 +141,11 @@ export default function TechStackSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -5, scale: 1.05 }}
-              className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 hover:bg-gray-800/50 transition-all duration-300 group"
+              className=" backdrop-blur-sm border border-gray-800 rounded-xl p-6 hover:bg-gray-800/50 transition-all duration-300 group"
             >
               <div className="text-center">
                 <div className="text-4xl mb-3">{tech.icon}</div>
-                <h3 className="text-lg font-bold text-white mb-3">{tech.name}</h3>
+                <h3 className="text-lg font-bold mb-3 text-black dark:text-white">{tech.name}</h3>
                 
                 {/* Progress Bar */}
                 <div className="w-full bg-gray-700 rounded-full h-2 mb-2">
@@ -156,7 +156,7 @@ export default function TechStackSection() {
                     transition={{ duration: 1, delay: index * 0.1 }}
                   />
                 </div>
-                <span className="text-sm text-gray-400">{tech.level}%</span>
+                <span className="text-sm text-black dark:text-white">{tech.level}%</span>
               </div>
             </motion.div>
           ))}

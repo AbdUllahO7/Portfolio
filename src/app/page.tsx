@@ -11,16 +11,7 @@ import SkillsSection from "@/components/skills-section";
 import { product } from "@/constants/heroParallaxData";
 import { items } from "@/constants/hoverEffectData";
 import { testimonials } from "@/constants/testimonialsData";
-import Image from "next/image";
-import {
-  IconBrandGithub,
-  IconBrandInstagram,
-  IconBrandLinkedin,
-  IconBrandWhatsapp,
-  IconBrandX,
-} from "@tabler/icons-react";
-import Link from "next/link";
-import { Eye, Mail } from "lucide-react";
+
 import ServicesSection from "@/components/sections/ServicesSection";
 import TechStackSection from "@/components/sections/TechStackSection";
 import CaseStudiesSection from "@/components/sections/CaseStudiesSection";
@@ -33,14 +24,12 @@ import { words } from "@/constants/words";
 import Header from "@/components/Header";
 
 export default function Home() {
-
-  
   return (
-    <main className="w-full">
-            <Header />
+    <main className="w-full min-h-screen bg-white dark:bg-black transition-colors duration-300">
+      <Header />
 
-      <BackgroundLines>
-        <div className="bg-slate-900">
+      <BackgroundLines className="bg-white dark:bg-black">
+        <div className="bg-white dark:bg-slate-900 transition-colors duration-300">
           {/* Hero Section */}
           <section className="" id="home">
             <HeroParallax products={product} />
@@ -50,7 +39,7 @@ export default function Home() {
             {/* Typewriter Effect */}
             <TypewriterEffect 
               words={words} 
-              className="text-white"
+              className="text-black dark:text-white"
             />
 
             {/* About Section */}
@@ -97,7 +86,7 @@ export default function Home() {
             </section>
 
             {/* Testimonials Section */}
-            <section id="testimonials" className="rounded-md flex flex-col antialiased dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+            <section id="testimonials" className="rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
               <InfiniteMovingCards
                 items={testimonials}
                 direction="left"

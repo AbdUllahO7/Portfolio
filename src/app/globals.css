@@ -9,5 +9,265 @@ body {
 @layer base {
   :root {
     --radius: 0.5rem;
+    
+    /* Light theme colors */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 9% 98%;
+    --primary-foreground: 240 10% 3.9%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+  }
+
+  /* Dark theme colors */
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    @apply transition-colors duration-300;
+  }
+  
+  /* Smooth transitions for theme switching */
+  html {
+    @apply transition-colors duration-300;
+    scroll-behavior: smooth;
+  }
+  
+  /* Enhanced selection colors */
+  ::selection {
+    @apply bg-blue-500/20 text-blue-900 dark:text-blue-100;
+  }
+  
+  /* Enhanced focus styles */
+  :focus-visible {
+    @apply outline-none ring-2 ring-blue-500 ring-offset-2 ring-offset-background;
+  }
+
+  /* Custom scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-gray-900;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 dark:bg-gray-700 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400 dark:bg-gray-600;
+  }
+
+  /* Firefox scrollbar */
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(156 163 175) rgb(243 244 246);
+  }
+
+  .dark html {
+    scrollbar-color: rgb(75 85 99) rgb(17 24 39);
+  }
+}
+
+/* Enhanced animation styles */
+@layer utilities {
+  /* Your existing scroll animation */
+  .animate-scroll {
+    animation: scroll var(--animation-duration, 40s) linear infinite;
+    animation-direction: var(--animation-direction, forwards);
+  }
+
+  /* Enhanced theme transition utility */
+  .theme-transition {
+    transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Enhanced card hover effects */
+  .card-hover {
+    @apply transition-all duration-300 ease-out hover:shadow-lg hover:shadow-black/5 dark:hover:shadow-white/5;
+    @apply hover:-translate-y-1;
+  }
+
+  /* Gradient text utility */
+  .gradient-text {
+    @apply bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent;
+  }
+
+  /* Enhanced button styles */
+  .btn-primary {
+    @apply bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg font-medium;
+    @apply hover:from-blue-600 hover:to-purple-700 transition-all duration-300;
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+    @apply hover:shadow-lg hover:shadow-blue-500/25 active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 px-6 py-3 rounded-lg font-medium;
+    @apply hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300;
+    @apply focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2;
+    @apply hover:shadow-md active:scale-95;
+  }
+
+  /* Loading states */
+  .loading-pulse {
+    @apply animate-pulse bg-gray-200 dark:bg-gray-700 rounded-lg;
+  }
+
+  .loading-spinner {
+    @apply animate-spin rounded-full border-2 border-gray-300 border-t-blue-500;
+  }
+
+  /* Glass morphism effect */
+  .glass {
+    @apply backdrop-blur-sm bg-white/10 dark:bg-black/10 border border-white/20 dark:border-white/10;
+  }
+
+  /* Glow effects */
+  .glow {
+    @apply shadow-lg shadow-blue-500/25 dark:shadow-blue-400/25;
+  }
+
+  .glow-hover {
+    @apply hover:shadow-xl hover:shadow-blue-500/30 dark:hover:shadow-blue-400/30 transition-shadow duration-300;
+  }
+
+  /* Text gradients for different themes */
+  .text-gradient-blue {
+    @apply bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-purple {
+    @apply bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-green {
+    @apply bg-gradient-to-r from-green-600 to-green-400 bg-clip-text text-transparent;
+  }
+
+  /* Enhanced backdrop effects */
+  .backdrop-enhanced {
+    @apply backdrop-blur-md backdrop-saturate-150 backdrop-brightness-110;
+  }
+
+  /* Dark mode specific enhancements */
+  .dark-enhanced {
+    @apply dark:bg-gradient-to-br dark:from-gray-900 dark:to-gray-800;
+  }
+
+  /* Animation delays for staggered effects */
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-500 { animation-delay: 500ms; }
+}
+
+/* Enhanced component-specific styles */
+@layer components {
+  /* Header styles */
+  .header-glass {
+    @apply bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-800/50;
+  }
+
+  /* Card component enhancements */
+  .card-base {
+    @apply bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl shadow-sm;
+    @apply hover:shadow-md dark:hover:shadow-xl dark:hover:shadow-black/20 transition-all duration-300;
+  }
+
+  /* Section backgrounds */
+  .section-bg {
+    @apply bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800;
+  }
+
+  /* Enhanced form inputs */
+  .input-enhanced {
+    @apply bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg;
+    @apply focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+    @apply transition-all duration-200 placeholder-gray-500 dark:placeholder-gray-400;
+  }
+
+  /* Enhanced navigation */
+  .nav-link {
+    @apply text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white;
+    @apply transition-colors duration-200 font-medium;
+  }
+
+  .nav-link-active {
+    @apply text-blue-600 dark:text-blue-400 font-semibold;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  * {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .animate-scroll {
+    animation: none !important;
   }
 }

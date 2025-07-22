@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/providers/ThemeProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -65,14 +66,14 @@ export const metadata: Metadata = {
     telephone: false,
   },
   // Update this URL with your actual domain
-  metadataBase: new URL('https://www.abdullahalhasan.online'),
+  metadataBase: new URL('https://your-portfolio-domain.com'),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.abdullahalhasan.online",
+    url: "https://your-portfolio-domain.com",
     title: "Abdullah Alhasan - Software Engineer & Full Stack Developer",
     description: "Experienced Software Engineer specializing in full-stack web and mobile application development. Expert in React, React Native, Node.js, Laravel, .NET, and modern web technologies.",
     siteName: "Abdullah Alhasan Portfolio",
@@ -117,13 +118,6 @@ export const metadata: Metadata = {
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
     { media: "(prefers-color-scheme: dark)", color: "#000000" },
   ],
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
-  },
-  manifest: "/manifest.json", // You may want to create a web app manifest
 };
 
 export default function RootLayout({
@@ -132,11 +126,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-black text-black dark:text-white transition-colors duration-300`}
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange={false}
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

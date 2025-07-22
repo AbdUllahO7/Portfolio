@@ -66,7 +66,7 @@ export function TimelineSection({ timelineData }: TimelineSectionProps) {
           transition={{ duration: 0.5 }}
           className="mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">My Professional Journey</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 ">My Professional Journey</h2>
           <p className="text-gray-400 max-w-2xl">
             Explore my career timeline and the key projects I ve worked on throughout my professional journey. Each
             project represents a milestone in my growth as a software engineer.
@@ -90,7 +90,7 @@ export function TimelineSection({ timelineData }: TimelineSectionProps) {
                   </div>
 
                   <div className="pl-20 md:pl-20">
-                    <h3 className="text-2xl md:text-4xl font-bold text-white mb-1">{item.title}</h3>
+                    <h3 className="text-2xl md:text-4xl font-bold dark:text-white text-black mb-1">{item.title}</h3>
                     <div className="flex flex-col mb-4">
                       {/* Optional fields are removed since they don't exist in your data */}
                     </div>
@@ -98,8 +98,8 @@ export function TimelineSection({ timelineData }: TimelineSectionProps) {
                 </div>
               </div>
 
-              <div className="relative pl-20 md:pl-0 pr-4 md:w-2/3 md:pr-0">
-                <motion.div whileHover={{ y: -5 }} transition={{ duration: 0.2 }}>
+              <div className="relative pl-20 md:pl-0 pr-4 md:w-2/3 dark:text-white text-black md:pr-0">
+                <motion.div whileHover={{ y: -5 }} transition={{ duration: 0.2 }} className="">
                   {item.content}
                 </motion.div>
               </div>

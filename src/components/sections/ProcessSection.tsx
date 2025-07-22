@@ -144,7 +144,7 @@ export default function ProcessSection() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight text-white">
             My Work Process
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+          <p className="max-w-2xl mx-auto text-lg">
             A systematic approach to deliver exceptional software solutions from concept to completion
           </p>
         </div>
@@ -174,13 +174,13 @@ export default function ProcessSection() {
                   </div>
 
                   {/* Card */}
-                  <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 mt-32 hover:bg-gray-800/50 transition-all duration-300 group">
+                  <div className=" backdrop-blur-sm border border-gray-800 rounded-xl p-6 mt-32  transition-all duration-300 group">
                     <div className={`w-16 h-16 rounded-lg bg-gradient-to-br ${step.color} flex items-center justify-center mb-4 text-white mx-auto`}>
                       {step.icon}
                     </div>
                     
-                    <h3 className="text-lg font-bold text-white mb-2 text-center">{step.title}</h3>
-                    <p className="text-gray-400 text-sm mb-4 text-center">{step.description}</p>
+                    <h3 className="text-lg font-bold  mb-2 text-center">{step.title}</h3>
+                    <p className=" text-sm mb-4 text-center">{step.description}</p>
                     
                     <div className={`text-xs font-semibold text-center bg-gradient-to-r ${step.color} bg-clip-text text-transparent mb-4`}>
                       {step.duration}
@@ -188,7 +188,7 @@ export default function ProcessSection() {
 
                     <ul className="space-y-1">
                       {step.details.map((detail, idx) => (
-                        <li key={idx} className="text-xs text-gray-300 flex items-center">
+                        <li key={idx} className="text-xs  flex items-center">
                           <div className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${step.color} mr-2`}></div>
                           {detail}
                         </li>
@@ -226,7 +226,7 @@ export default function ProcessSection() {
                 </div>
 
                 {/* Content */}
-                <div className="flex-1 bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 hover:bg-gray-800/50 transition-all duration-300">
+                <div className="flex-1 backdrop-blur-sm border border-gray-800 rounded-xl p-6 hover:bg-gray-800/50 transition-all duration-300">
                   <div className="flex justify-between items-start mb-3">
                     <h3 className="text-lg font-bold text-white">{step.title}</h3>
                     <span className={`text-xs font-semibold bg-gradient-to-r ${step.color} bg-clip-text text-transparent`}>
@@ -234,11 +234,11 @@ export default function ProcessSection() {
                     </span>
                   </div>
                   
-                  <p className="text-gray-400 text-sm mb-4">{step.description}</p>
+                  <p className=" text-sm mb-4">{step.description}</p>
                   
                   <ul className="space-y-1">
                     {step.details.map((detail, idx) => (
-                      <li key={idx} className="text-xs text-gray-300 flex items-center">
+                      <li key={idx} className="text-xs flex items-center">
                         <div className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${step.color} mr-2`}></div>
                         {detail}
                       </li>
@@ -259,7 +259,7 @@ export default function ProcessSection() {
           transition={{ delay: 0.5 }}
         >
           <h3 className="text-2xl font-bold text-white mb-4">Ready to Start Your Project?</h3>
-          <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
+          <p className=" mb-6 max-w-2xl mx-auto text-white">
             Let's discuss your requirements and create a customized development plan that fits your needs and timeline.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

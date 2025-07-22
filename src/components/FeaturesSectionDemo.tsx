@@ -123,8 +123,8 @@ export function FeaturesSectionDemo() {
 
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight text-white">My Expertise</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight dark:text-white text-black">My Expertise</h2>
+          <p className=" max-w-2xl mx-auto dark:text-white text-black">
             Delivering innovative software solutions with expertise in development and design. 
           </p>
         </div>
@@ -190,7 +190,7 @@ const Feature = ({
         },
       }}
       className={cn(
-        "relative group rounded-xl overflow-hidden backdrop-blur-sm border border-gray-800 bg-gray-900/70 hover:bg-gray-800/80 transition-all duration-300",
+        "relative group rounded-xl overflow-hidden backdrop-blur-sm border border-gray-800  hover:bg-gray-800/80 transition-all duration-300",
         isHovered ? "shadow-lg scale-[1.02]" : "shadow",
       )}
       onMouseEnter={onHover}
@@ -218,11 +218,11 @@ const Feature = ({
           </motion.div>
         </div>
 
-        <h3 className="text-xl font-bold mb-3 text-white group-hover:translate-x-1 transition-transform duration-300">
+        <h3 className="text-xl font-bold mb-3  group-hover:translate-x-1 transition-transform duration-300">
           {title}
         </h3>
 
-        <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">{description}</p>
+        <p className=" group-hover:text-gray-300 transition-colors duration-300">{description}</p>
 
         <div
           className={cn(

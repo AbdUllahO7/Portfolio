@@ -6,10 +6,10 @@ import Image from "next/image";
       title: "2025",
       content: (
         <div>
-          <p className="text-neutral-200 text-xs md:text-sm font-normal">
+          <p className=" text-xs md:text-sm font-normal dark:text-white text-black">
             LayandDent , A leading Saudi company in dental supplies and equipment, we strive to be the first choice for our doctors.
           </p>
-          <p className="text-neutral-200 text-xs md:text-sm font-normal mb-10">
+          <p className=" text-xs md:text-sm font-normal mb-10">
             {/* short description  */}
           </p>
           <Link href= "https://layan-medical.vercel.app/" target="_blank" className=" bg-green-500 p-2 flex w-fit gap-4  rounded-lg pr-3 pl-3 mb-10 " >
@@ -53,10 +53,10 @@ import Image from "next/image";
       title: "2025",
       content: (
         <div>
-          <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
+          <p className="text-xs md:text-sm font-normal mb-8">
           Amwall, Your business Consultant. - Financial and tax consulting for foreign companies in Türkiye
           </p>
-          <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
+          <p className=" text-xs md:text-sm font-normal mb-8">
               I am pleased to share with you Amwall, an advanced platform designed for financial consulting in Türkiye.
           </p>
           <Link href= "https://www.amwall.net/" target="_blank" className=" bg-green-500 p-2 flex w-fit gap-4  rounded-lg pr-3 pl-3 mb-10 " >
@@ -100,11 +100,11 @@ import Image from "next/image";
       title: "2025",
       content: (
         <div>
-          <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
+          <p className=" text-xs md:text-sm font-normal mb-8">
           Store It - Your Go-To File Upload and Management Solution
 
           </p>
-          <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
+          <p className=" text-xs md:text-sm font-normal mb-8">
                 I’m excited to share Store It, a cutting-edge platform designed for seamless file uploading and management. 
           </p>
           <Link href= "https://store-it-coral-eta.vercel.app/sign-in" target="_blank" className=" bg-green-500 p-2 flex w-fit gap-4  rounded-lg pr-3 pl-3 mb-10 " >
@@ -148,10 +148,10 @@ import Image from "next/image";
       title: "2024",
       content: (
         <div>
-          <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
+          <p className=" text-xs md:text-sm font-normal mb-8">
                 Live Documentation 
           </p>
-          <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
+          <p className=" text-xs md:text-sm font-normal mb-8">
               Write , Edit and Shar easyly Your Document 
           </p>
           <Link href= "https://live-doc-plum.vercel.app/" target="_blank" className=" bg-green-500 p-2 flex w-fit gap-4  rounded-lg pr-3 pl-3 mb-10 " >
@@ -195,10 +195,10 @@ import Image from "next/image";
       title: "2024",
       content: (
         <div>
-          <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
+          <p className="text-xs md:text-sm font-normal mb-8">
                 ECommerce App with Admin Panel
           </p>
-          <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
+          <p className=" text-xs md:text-sm font-normal mb-8">
               I&apos;m excited to share that I’ve completed the MERN Stack Full Course, where I built a fully functional ECommerce application! 
           </p>
         
@@ -239,7 +239,7 @@ import Image from "next/image";
       title: "2023",
       content: (
         <div>
-          <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
+          <p className="text-xs md:text-sm font-normal mb-8">
           Built and launched Aceternity UI and Aceternity UI Pro from scratch , Full Stack Project 
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -279,7 +279,7 @@ import Image from "next/image";
       title: "Early 2023",
       content: (
         <div>
-          <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
+          <p className="text-xs md:text-sm font-normal mb-8">
             Built and launched Aceternity UI and Aceternity UI Pro from scratch , Full Stack Project 
           </p>
           <Link href= "http://abdullaho7.github.io/Solo-Main/" target="_blank" className=" bg-green-500 p-2 flex w-fit gap-4  rounded-lg pr-3 pl-3 mb-10 " >

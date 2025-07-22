@@ -106,7 +106,7 @@ export default function ServicesSection() {
 
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight text-white">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight text-black dark:text-white">
             Services I Offer
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
@@ -127,7 +127,7 @@ export default function ServicesSection() {
               key={service.title}
               variants={item}
               whileHover={{ y: -5, scale: 1.02 }}
-              className="group relative bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-6 hover:bg-gray-800/50 transition-all duration-300"
+              className="group relative  backdrop-blur-sm border border-gray-800 rounded-2xl p-6 hover:bg-gray-800/50 transition-all duration-300"
             >
               <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-500">
                 <div className={`absolute inset-0 bg-gradient-to-br ${service.color} rounded-2xl`}></div>
@@ -138,17 +138,17 @@ export default function ServicesSection() {
                   {service.icon}
                 </div>
 
-                <h3 className="text-xl font-bold mb-3 text-white group-hover:translate-x-1 transition-transform duration-300">
+                <h3 className="text-xl font-bold mb-3 dark:text-white text-black group-hover:translate-x-1 transition-transform duration-300">
                   {service.title}
                 </h3>
 
-                <p className="text-gray-400 mb-6 leading-relaxed">
+                <p className="dark:text-white text-black mb-6 leading-relaxed">
                   {service.description}
                 </p>
 
                 <div className="space-y-2">
                   {service.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center text-sm text-gray-300">
+                    <div key={idx} className={`flex items-center text-sm ${service.color}`}>
                       <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${service.color} mr-3`}></div>
                       {feature}
                     </div>

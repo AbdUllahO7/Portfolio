@@ -108,7 +108,7 @@ export default function ContactFormSection() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight text-white">
             Let's Work Together
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+          <p className="max-w-2xl mx-auto text-lg">
             Have a project in mind? I'd love to hear about it. Send me a message and let's start building something amazing together.
           </p>
         </div>
@@ -124,7 +124,7 @@ export default function ContactFormSection() {
           >
             <div>
               <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
-              <p className="text-gray-400 mb-8">
+              <p className=" mb-8">
                 I'm always open to discussing new opportunities, interesting projects, and creative challenges. 
                 Whether you're a startup looking to build your first app or an established company seeking to modernize your systems, I'm here to help.
               </p>
@@ -139,13 +139,13 @@ export default function ContactFormSection() {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                   whileHover={{ y: -5 }}
-                  className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 hover:bg-gray-800/50 transition-all duration-300 group"
+                  className=" backdrop-blur-sm border border-gray-800 rounded-xl p-6 hover:bg-gray-800/50 transition-all duration-300 group"
                 >
                   <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${info.color} flex items-center justify-center mb-4 text-white`}>
                     {info.icon}
                   </div>
-                  <h4 className="text-lg font-semibold text-white mb-2">{info.title}</h4>
-                  <p className="text-gray-400">{info.content}</p>
+                  <h4 className="text-lg font-semibold dark:text-white text-black mb-2">{info.title}</h4>
+                  <p className="text-black dark:text-white">{info.content}</p>
                 </motion.div>
               ))}
             </div>
@@ -170,7 +170,7 @@ export default function ContactFormSection() {
                     <div className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
                       {stat.value}
                     </div>
-                    <div className="text-sm text-gray-400">{stat.label}</div>
+                    <div className="text-sm text-white ">{stat.label}</div>
                   </div>
                 ))}
               </div>
@@ -183,12 +183,12 @@ export default function ContactFormSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8"
+            className="backdrop-blur-sm border border-gray-800 rounded-2xl p-8"
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="relative">
-                  <User className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
+                  <User className="absolute left-3 top-3 h-5 w-5 text-white" />
                   <input
                     type="text"
                     name="name"
@@ -201,7 +201,7 @@ export default function ContactFormSection() {
                 </div>
 
                 <div className="relative">
-                  <Mail className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
+                  <Mail className="absolute left-3 top-3 h-5 w-5 text-white" />
                   <input
                     type="email"
                     name="email"
@@ -215,7 +215,7 @@ export default function ContactFormSection() {
               </div>
 
               <div className="relative">
-                <Briefcase className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
+                <Briefcase className="absolute left-3 top-3 h-5 w-5 text-white" />
                 <input
                   type="text"
                   name="company"
@@ -227,7 +227,7 @@ export default function ContactFormSection() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">Project Type</label>
+                <label className="block text-sm font-medium text-black dark:text-white mb-2">Project Type</label>
                 <select
                     title="2"
                   name="projectType"
@@ -244,7 +244,7 @@ export default function ContactFormSection() {
               </div>
 
               <div className="relative">
-                <MessageSquare className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
+                <MessageSquare className="absolute left-3 top-3 h-5 w-5 text-white" />
                 <input
                   type="text"
                   name="subject"
@@ -275,7 +275,7 @@ export default function ContactFormSection() {
                 whileTap={{ scale: 0.98 }}
                 className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 ${
                   isSubmitting
-                    ? "bg-gray-700 text-gray-400 cursor-not-allowed"
+                    ? "bg-gray-700  cursor-not-allowed"
                     : "bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700"
                 }`}
               >

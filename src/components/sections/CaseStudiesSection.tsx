@@ -155,7 +155,7 @@ export default function CaseStudiesSection() {
 
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight text-white">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight ">
             Case Studies
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
@@ -171,8 +171,8 @@ export default function CaseStudiesSection() {
               onClick={() => setSelectedCase(index)}
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                 selectedCase === index
-                  ? `bg-gradient-to-r ${study.color} text-white shadow-lg`
-                  : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+                  ? `bg-gradient-to-r ${study.color} shadow-lg`
+                  : "dark:bg-gray-800 light:bg-green-500 hover:bg-gray-700 hover:text-white"
               }`}
             >
               {study.title.split(' - ')[0]}
@@ -200,7 +200,7 @@ export default function CaseStudiesSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
               <div className="absolute bottom-4 left-4">
-                <span className={`px-3 py-1 rounded-full text-sm font-semibold bg-gradient-to-r ${caseStudies[selectedCase].color} text-white`}>
+                <span className={`px-3 py-1 rounded-full text-sm font-semibold bg-gradient-to-r ${caseStudies[selectedCase].color} `}>
                   {caseStudies[selectedCase].category}
                 </span>
               </div>
@@ -208,20 +208,20 @@ export default function CaseStudiesSection() {
 
             {/* Project Stats */}
             <div className="grid grid-cols-3 gap-4 mt-6">
-              <div className="text-center p-4 bg-gray-900/50 rounded-lg border border-gray-800">
+              <div className="text-center p-4  rounded-lg border border-gray-800">
                 <Clock className="h-6 w-6 mx-auto mb-2 text-blue-500" />
-                <div className="text-sm text-gray-400">Duration</div>
-                <div className="font-semibold text-white">{caseStudies[selectedCase].duration}</div>
+                <div className="text-sm ">Duration</div>
+                <div className="font-semibold ">{caseStudies[selectedCase].duration}</div>
               </div>
-              <div className="text-center p-4 bg-gray-900/50 rounded-lg border border-gray-800">
+              <div className="text-center p-4  rounded-lg border border-gray-800">
                 <Users className="h-6 w-6 mx-auto mb-2 text-green-500" />
-                <div className="text-sm text-gray-400">Team</div>
-                <div className="font-semibold text-white">{caseStudies[selectedCase].team}</div>
+                <div className="text-sm ">Team</div>
+                <div className="font-semibold ">{caseStudies[selectedCase].team}</div>
               </div>
-              <div className="text-center p-4 bg-gray-900/50 rounded-lg border border-gray-800">
+              <div className="text-center p-4  rounded-lg border border-gray-800">
                 <Code className="h-6 w-6 mx-auto mb-2 text-purple-500" />
-                <div className="text-sm text-gray-400">Tech Stack</div>
-                <div className="font-semibold text-white">{caseStudies[selectedCase].technologies.length} tools</div>
+                <div className="text-sm ">Tech Stack</div>
+                <div className="font-semibold ">{caseStudies[selectedCase].technologies.length} tools</div>
               </div>
             </div>
           </div>
@@ -229,7 +229,7 @@ export default function CaseStudiesSection() {
           {/* Project Details */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-white mb-2">
+              <h3 className="text-2xl font-bold  mb-2">
                 {caseStudies[selectedCase].title}
               </h3>
               <p className="text-lg text-gray-400 mb-4">
@@ -239,7 +239,7 @@ export default function CaseStudiesSection() {
                 href={caseStudies[selectedCase].link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`inline-flex items-center px-6 py-3 rounded-lg font-semibold bg-gradient-to-r ${caseStudies[selectedCase].color} text-white hover:shadow-lg transition-all duration-300 group`}
+                className={`inline-flex items-center px-6 py-3 rounded-lg font-semibold bg-gradient-to-r ${caseStudies[selectedCase].color} hover:shadow-lg transition-all duration-300 group`}
               >
                 View Live Project
                 <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -249,7 +249,7 @@ export default function CaseStudiesSection() {
             {/* Challenge & Solution */}
             <div className="space-y-6">
               <div>
-                <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
+                <h4 className="text-lg font-semibold  mb-3 flex items-center">
                   <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
                   Challenge
                 </h4>
@@ -259,7 +259,7 @@ export default function CaseStudiesSection() {
               </div>
 
               <div>
-                <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
+                <h4 className="text-lg font-semibold  mb-3 flex items-center">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
                   Solution
                 </h4>
@@ -271,12 +271,12 @@ export default function CaseStudiesSection() {
 
             {/* Technologies Used */}
             <div>
-              <h4 className="text-lg font-semibold text-white mb-4">Technologies Used</h4>
+              <h4 className="text-lg font-semibold  mb-4">Technologies Used</h4>
               <div className="flex flex-wrap gap-2">
                 {caseStudies[selectedCase].technologies.map((tech, index) => (
                   <span
                     key={index}
-                    className="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm border border-gray-700"
+                    className="px-3 py-1  rounded-full text-sm border border-gray-700"
                   >
                     {tech}
                   </span>
@@ -286,10 +286,10 @@ export default function CaseStudiesSection() {
 
             {/* Key Features */}
             <div>
-              <h4 className="text-lg font-semibold text-white mb-4">Key Features</h4>
+              <h4 className="text-lg font-semibold  mb-4">Key Features</h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {caseStudies[selectedCase].features.map((feature, index) => (
-                  <div key={index} className="flex items-center text-gray-300">
+                  <div key={index} className="flex items-center ">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-3 flex-shrink-0" />
                     <span className="text-sm">{feature}</span>
                   </div>
@@ -299,13 +299,13 @@ export default function CaseStudiesSection() {
 
             {/* Results */}
             <div>
-              <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
+              <h4 className="text-lg font-semibold  mb-4 flex items-center">
                 <TrendingUp className="h-5 w-5 mr-2 text-green-500" />
                 Results Achieved
               </h4>
               <div className="space-y-2">
                 {caseStudies[selectedCase].results.map((result, index) => (
-                  <div key={index} className="flex items-center text-gray-300">
+                  <div key={index} className="flex items-center ">
                     <ArrowRight className="h-4 w-4 text-green-500 mr-3 flex-shrink-0" />
                     <span>{result}</span>
                   </div>
@@ -317,18 +317,18 @@ export default function CaseStudiesSection() {
 
         {/* CTA Section */}
         <motion.div 
-          className="text-center mt-16 bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 border border-gray-700"
+          className="text-center mt-16 bg-gradient-to-r from-green-900 to-green-500 rounded-2xl p-8 border border-gray-700"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5 }}
         >
-          <h3 className="text-2xl font-bold text-white mb-4">Interested in Similar Results?</h3>
-          <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
+          <h3 className="text-2xl font-bold  mb-4">Interested in Similar Results?</h3>
+          <p className="mb-6 max-w-2xl mx-auto">
             Every project is unique, but the approach remains consistent: understanding your needs, 
             crafting the right solution, and delivering exceptional results.
           </p>
-          <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+          <button className="bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
             Start Your Project
           </button>
         </motion.div>

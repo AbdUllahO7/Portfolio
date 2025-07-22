@@ -6,7 +6,6 @@ import {
   Trophy, 
   Target, 
   Zap, 
-  Heart, 
   Award,
   Star,
   Briefcase,
@@ -118,7 +117,7 @@ export default function StatisticsSection() {
 
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight text-white">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight ">
             By the Numbers
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
@@ -144,10 +143,10 @@ export default function StatisticsSection() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -5 }}
-              className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 hover:bg-gray-800/50 transition-all duration-300 group"
+              className=" backdrop-blur-sm border border-gray-800 rounded-2xl p-8 hover:bg-gray-800/50 transition-all duration-300 group"
             >
               <div className="flex items-start justify-between mb-6">
-                <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${achievement.color} flex items-center justify-center text-white`}>
+                <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${achievement.color} flex items-center justify-center `}>
                   {achievement.icon}
                 </div>
                 <motion.div
@@ -160,7 +159,7 @@ export default function StatisticsSection() {
                 </motion.div>
               </div>
               
-              <h3 className="text-xl font-bold text-white mb-2 group-hover:translate-x-1 transition-transform duration-300">
+              <h3 className="text-xl font-bold  mb-2 group-hover:translate-x-1 transition-transform duration-300">
                 {achievement.title}
               </h3>
               <p className="text-gray-400 leading-relaxed">
@@ -177,7 +176,7 @@ export default function StatisticsSection() {
           viewport={{ once: true }}
           className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 border border-gray-700"
         >
-          <h3 className="text-2xl font-bold text-white mb-8 text-center">Fun Facts & Metrics</h3>
+          <h3 className="text-2xl font-bold  mb-8 text-center text-white">Fun Facts & Metrics</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {additionalStats.map((stat, index) => (
               <motion.div
@@ -188,11 +187,11 @@ export default function StatisticsSection() {
                 transition={{ delay: index * 0.1 }}
                 className="text-center group"
               >
-                <div className="flex justify-center mb-3 text-blue-500 group-hover:text-purple-500 transition-colors">
+                <div className="flex justify-center  mb-3  text-white  group-hover:text-purple-500 transition-colors">
                   {stat.icon}
                 </div>
-                <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
-                <div className="text-sm text-gray-400">{stat.label}</div>
+                <div className="text-2xl font-bold mb-1 text-white ">{stat.value}</div>
+                <div className="text-sm text-white ">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -206,17 +205,17 @@ export default function StatisticsSection() {
           transition={{ delay: 0.5 }}
           className="text-center mt-16 max-w-4xl mx-auto"
         >
-          <blockquote className="text-xl md:text-2xl text-gray-300 italic mb-6">
+          <blockquote className="text-xl md:text-2xl italic mb-6">
             "Success is not just about the numbers, but about the impact we create and the problems we solve. 
             Every line of code, every project, and every satisfied client represents a step forward in this journey."
           </blockquote>
           <div className="flex items-center justify-center space-x-4">
-            <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold">
+            <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center font-bold">
               A
             </div>
             <div>
-              <div className="text-white font-semibold">Abdullah Alhasan</div>
-              <div className="text-gray-400 text-sm">Software Engineer</div>
+              <div className="font-semibold">Abdullah Alhasan</div>
+              <div className="text-sm">Software Engineer</div>
             </div>
           </div>
         </motion.div>
@@ -257,14 +256,14 @@ const StatCard = ({ stat, index, isInView }: { stat: any, index: number, isInVie
       viewport={{ once: true }}
       transition={{ delay: index * 0.1 }}
       whileHover={{ y: -10, scale: 1.05 }}
-      className="group relative bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 hover:bg-gray-800/50 transition-all duration-300"
+      className="group relative  backdrop-blur-sm border border-gray-800 rounded-2xl p-8 hover:bg-gray-800/50 transition-all duration-300"
     >
       <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-500">
         <div className={`absolute inset-0 bg-gradient-to-br ${stat.color} rounded-2xl`}></div>
       </div>
 
       <div className="relative z-10">
-        <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${stat.color} flex items-center justify-center mb-6 text-white`}>
+        <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${stat.color} flex items-center justify-center mb-6 `}>
           {stat.icon}
         </div>
 
@@ -272,7 +271,7 @@ const StatCard = ({ stat, index, isInView }: { stat: any, index: number, isInVie
           {Math.floor(count)}{stat.suffix}
         </div>
 
-        <h3 className="text-xl font-bold text-white mb-3 group-hover:translate-x-1 transition-transform duration-300">
+        <h3 className="text-xl font-bold  mb-3 group-hover:translate-x-1 transition-transform duration-300">
           {stat.label}
         </h3>
 
