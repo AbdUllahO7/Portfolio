@@ -17,7 +17,7 @@ export const getCaseStudies = (t: TFunction) => [
     results: t('caseStudies.projects.layandent.results', { returnObjects: true }) as string[],
     features: t('caseStudies.projects.layandent.features', { returnObjects: true }) as string[],
     link: "https://layan-medical.vercel.app/",
-    color: "from-green-500 to-emerald-500"
+    color: "from-blue-500 to-cyan-500"
   },
   {
     id: 2,
@@ -49,7 +49,7 @@ export const getCaseStudies = (t: TFunction) => [
     results: t('caseStudies.projects.storeIt.results', { returnObjects: true }) as string[],
     features: t('caseStudies.projects.storeIt.features', { returnObjects: true }) as string[],
     link: "https://store-it-coral-eta.vercel.app/sign-in",
-    color: "from-purple-500 to-violet-500"
+    color: "from-blue-500 to-cyan-500"
   },
   {
     id: 4,
@@ -65,6 +65,6 @@ export const getCaseStudies = (t: TFunction) => [
     results: t('caseStudies.projects.liveDoc.results', { returnObjects: true }) as string[],
     features: t('caseStudies.projects.liveDoc.features', { returnObjects: true }) as string[],
     link: "https://live-doc-plum.vercel.app/",
-    color: "from-orange-500 to-red-500"
+    color: "from-blue-500 to-cyan-500"
   }
 ];

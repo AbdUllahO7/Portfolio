@@ -19,7 +19,7 @@ export const getTechStack = (t: TFunction) => ({
   },
   backend: {
     title: t('techStack.categories.backend'),
-    color: "from-green-500 to-emerald-500",
+    color: "from-blue-500 to-cyan-500",
     technologies: [
       { name: "Node.js", level: 85, icon: "💚" },
       { name: "Express.js", level: 80, icon: "🚀" },
@@ -33,7 +33,7 @@ export const getTechStack = (t: TFunction) => ({
   },
   mobile: {
     title: t('techStack.categories.mobile'),
-    color: "from-purple-500 to-violet-500",
+    color: "from-blue-500 to-cyan-500",
     technologies: [
       { name: "React Native", level: 85, icon: "📱" },
       { name: "Expo", level: 80, icon: "🔥" },
@@ -45,7 +45,7 @@ export const getTechStack = (t: TFunction) => ({
   },
   database: {
     title: t('techStack.categories.database'),
-    color: "from-orange-500 to-red-500",
+    color: "from-blue-500 to-cyan-500",
     technologies: [
       { name: "MongoDB", level: 90, icon: "🍃" },
       { name: "PostgreSQL", level: 75, icon: "🐘" },
@@ -57,7 +57,7 @@ export const getTechStack = (t: TFunction) => ({
   },
   tools: {
     title: t('techStack.categories.tools'),
-    color: "from-pink-500 to-rose-500",
+    color: "from-blue-500 to-cyan-500",
     technologies: [
       { name: "Git", level: 90, icon: "🌿" },
       { name: "Docker", level: 75, icon: "🐳" },

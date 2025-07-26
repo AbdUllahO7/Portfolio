@@ -74,10 +74,10 @@ export const Card = ({
   children: React.ReactNode;
 }) => {
   return (
-    <BackgroundGradient className="h-full rounded-3xl p-px">
+    <div className="h-full rounded-3xl p-px">
       <div
         className={cn(
-          "rounded-3xl h-full w-full p-5 overflow-hidden bg-black backdrop-blur-sm bg-opacity-90 border border-neutral-800 group-hover:border-neutral-700 relative z-20 transition-all duration-300",
+          "rounded-3xl h-full w-full p-5 overflow-hidden bg-transparent backdrop-blur-sm bg-opacity-90 border border-neutral-800 group-hover:border-neutral-700 relative z-20 transition-all duration-300",
           className
         )}
       >
@@ -90,7 +90,7 @@ export const Card = ({
         {/* Subtle glow effect */}
         <div className="absolute -bottom-2 -left-2 -right-2 h-1/3 bg-gradient-to-t from-blue-500/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
       </div>
-    </BackgroundGradient>
+    </div>
   );
 };
 
@@ -102,7 +102,7 @@ export const CardTitle = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h4 className={cn("text-zinc-100 font-bold text-lg tracking-wide mt-2", className)}>
+    <h4 className={cn("text-zinc-900 dark:text-white font-bold text-lg tracking-wide mt-2", className)}>
       {children}
     </h4>
   );
@@ -118,7 +118,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-4 text-zinc-400 tracking-wide leading-relaxed text-sm",
+        "mt-4 text-zinc-700 dark:text-white tracking-wide leading-relaxed text-sm",
         className
       )}
     >

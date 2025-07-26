@@ -62,7 +62,7 @@ export default function CaseStudiesSection() {
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                 selectedCase === index
                   ? `bg-gradient-to-r ${study.color} shadow-lg`
-                  : "dark:bg-gray-800 light:bg-green-500 hover:bg-gray-700 hover:text-white"
+                  : "bg-gradient-to-t from-blue-500 to-cyan-500 hover:bg-gray-700 hover:text-white"
               }`}
             >
               {study.title.split(' - ')[0]}
@@ -207,7 +207,7 @@ export default function CaseStudiesSection() {
 
         {/* CTA Section */}
         <motion.div 
-          className="text-center mt-16 bg-gradient-to-r from-green-900 to-green-500 rounded-2xl p-8 border border-gray-700"
+          className="text-center mt-16  rounded-2xl p-8 border border-gray-700"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
