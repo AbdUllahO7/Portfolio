@@ -1,79 +1,16 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { useState } from "react"
+import { useState, useMemo } from "react"
+import { useTranslation } from "react-i18next"
+import { getTechStack, getStats } from "@/constants/techStackData"
 
 export default function TechStackSection() {
+  const { t } = useTranslation()
   const [activeCategory, setActiveCategory] = useState("frontend")
 
-  const techStack = {
-    frontend: {
-      title: "Frontend",
-      color: "from-blue-500 to-cyan-500",
-      technologies: [
-        { name: "React", level: 95, icon: "⚛️" },
-        { name: "Next.js", level: 90, icon: "▲" },
-        { name: "TypeScript", level: 85, icon: "🔷" },
-        { name: "JavaScript", level: 95, icon: "🟨" },
-        { name: "HTML/CSS", level: 90, icon: "🎨" },
-        { name: "Tailwind CSS", level: 85, icon: "💨" },
-        { name: "Material-UI", level: 80, icon: "📦" },
-        { name: "ShadCN/UI", level: 80, icon: "🎭" },
-      ]
-    },
-    backend: {
-      title: "Backend",
-      color: "from-green-500 to-emerald-500",
-      technologies: [
-        { name: "Node.js", level: 85, icon: "💚" },
-        { name: "Express.js", level: 80, icon: "🚀" },
-        { name: "Laravel", level: 80, icon: "🔴" },
-        { name: ".NET", level: 75, icon: "🔵" },
-        { name: "Python", level: 70, icon: "🐍" },
-        { name: "PHP", level: 75, icon: "🐘" },
-        { name: "REST APIs", level: 90, icon: "🔗" },
-        { name: "GraphQL", level: 70, icon: "📊" },
-      ]
-    },
-    mobile: {
-      title: "Mobile",
-      color: "from-purple-500 to-violet-500",
-      technologies: [
-        { name: "React Native", level: 85, icon: "📱" },
-        { name: "Expo", level: 80, icon: "🔥" },
-        { name: "Android", level: 75, icon: "🤖" },
-        { name: "iOS", level: 75, icon: "🍎" },
-        { name: "Flutter", level: 60, icon: "💙" },
-        { name: "PWA", level: 80, icon: "🌐" },
-      ]
-    },
-    database: {
-      title: "Database",
-      color: "from-orange-500 to-red-500",
-      technologies: [
-        { name: "MongoDB", level: 90, icon: "🍃" },
-        { name: "PostgreSQL", level: 75, icon: "🐘" },
-        { name: "MySQL", level: 85, icon: "🗃️" },
-        { name: "Firebase", level: 80, icon: "🔥" },
-        { name: "Redis", level: 70, icon: "📊" },
-        { name: "Supabase", level: 75, icon: "⚡" },
-      ]
-    },
-    tools: {
-      title: "Tools & Cloud",
-      color: "from-pink-500 to-rose-500",
-      technologies: [
-        { name: "Git", level: 90, icon: "🌿" },
-        { name: "Docker", level: 75, icon: "🐳" },
-        { name: "AWS", level: 70, icon: "☁️" },
-        { name: "Vercel", level: 85, icon: "🔺" },
-        { name: "Appwrite", level: 80, icon: "📝" },
-        { name: "Strapi", level: 75, icon: "🎯" },
-        { name: "Figma", level: 80, icon: "🎨" },
-        { name: "Jira", level: 75, icon: "📋" },
-      ]
-    }
-  }
+  const techStack = useMemo(() => getTechStack(t), [t])
+  const stats = useMemo(() => getStats(t), [t])
 
   const categories = Object.keys(techStack) as Array<keyof typeof techStack>
 
@@ -88,7 +25,7 @@ export default function TechStackSection() {
           transition={{
             duration: 20,
             ease: "linear",
-            repeat: Infinity,
+            repeat: Number.POSITIVE_INFINITY,
             repeatType: "reverse",
           }}
           style={{
@@ -102,10 +39,10 @@ export default function TechStackSection() {
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight text-black dark:text-white">
-            Technology Stack
+            {t('techStack.sectionTitle')}
           </h2>
           <p className=" text-black dark:text-white max-w-2xl mx-auto text-lg">
-            Cutting-edge technologies and tools I use to build exceptional software solutions
+            {t('techStack.sectionDescription')}
           </p>
         </div>
 
@@ -170,12 +107,7 @@ export default function TechStackSection() {
           transition={{ delay: 0.5 }}
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
         >
-          {[
-            { number: "50+", label: "Technologies Mastered" },
-            { number: "100+", label: "Projects Completed" },
-            { number: "5+", label: "Years Experience" },
-            { number: "50+", label: "Happy Clients" },
-          ].map((stat, index) => (
+          {stats.map((stat, index) => (
             <div key={index} className="text-center">
               <motion.div
                 className={`text-3xl md:text-4xl font-bold bg-gradient-to-r ${techStack[activeCategory as keyof typeof techStack].color} bg-clip-text text-transparent mb-2`}

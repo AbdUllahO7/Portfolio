@@ -1,26 +1,26 @@
-export const items = [
+// constants/hoverEffectData.ts
 
-    {
-        title : 'Software Management', 
-        description : 'Overseeing software development, deployment, and maintenance efficiently.',
-        link : '#-1',
-    },
-    
-    {
-        title : 'Web Full Stack', 
-        description : 'Developing both front-end and back-end for web applications.',
-        link : '#-2',
-    },
-    
-    {
-        title : 'Applications Full Stack', 
-        description : 'Building and managing complete applications from UI to server.',
-        link : '#-3',
-    },
-    {
-        title : 'Database Manager', 
-        description : 'Organizing, managing, and optimizing databases effectively.',
-        link : '#-4',
-    },
+import { TFunction } from "i18next";
 
-]
+export const getItems = (t: TFunction) => [
+  {
+    title: t('services.softwareManagement.title'),
+    description: t('services.softwareManagement.description'),
+    link: '#-1',
+  },
+  {
+    title: t('services.webFullStack.title'),
+    description: t('services.webFullStack.description'),
+    link: '#-2',
+  },
+  {
+    title: t('services.applicationsFullStack.title'),
+    description: t('services.applicationsFullStack.description'),
+    link: '#-3',
+  },
+  {
+    title: t('services.databaseManager.title'),
+    description: t('services.databaseManager.description'),
+    link: '#-4',
+  },
+];

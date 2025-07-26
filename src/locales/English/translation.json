@@ -1,0 +1,549 @@
+{
+
+    "header": {
+      "title": "Abdullah",
+      "subtitle": "Software Engineer",
+      "navigation": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "techStack": "Tech Stack",
+        "caseStudies": "Case Studies",
+        "projects": "Projects",
+        "process": "Process",
+        "skills": "Skills",
+        "contact": "Contact"
+      },
+      "cta": {
+        "letsTalk": "Let's Talk",
+        "emailMe": "Email Me"
+      }
+    },
+    "hero": {
+      "greeting": "Hi, I'm",
+      "name": "Abdullah ALHASAN",
+      "title": "Software Engineer",
+      "subtitle": "Building innovative solutions with modern technology",
+      "description": "Passionate about creating exceptional digital experiences through clean code and thoughtful design."
+    },
+    "services": {
+    "softwareManagement": {
+      "title": "Software Management",
+      "description": "Overseeing software development, deployment, and maintenance efficiently."
+    },
+    "webFullStack": {
+      "title": "Web Full Stack",
+      "description": "Developing both front-end and back-end for web applications."
+    },
+    "applicationsFullStack": {
+      "title": "Applications Full Stack", 
+      "description": "Building and managing complete applications from UI to server."
+    },
+    "databaseManager": {
+      "title": "Database Manager",
+      "description": "Organizing, managing, and optimizing databases effectively."
+    }
+    },
+    "features": {
+      "sectionTitle": "My Expertise",
+      "sectionDescription": "Delivering innovative software solutions with expertise in development and design.",
+      "innovativeIdeas": {
+        "title": "Innovative Ideas",
+        "description": "I bring innovative ideas to the table, pushing boundaries in software development."
+      },
+      "software": {
+        "title": "Software",
+        "description": "In software engineering, I leverage cutting-edge technologies to create robust and scalable solutions."
+      },
+      "management": {
+        "title": "Management",
+        "description": "In software management, I excel in coordinating teams and optimizing workflows."
+      },
+      "graphicDesign": {
+        "title": "Graphic Design",
+        "description": "My expertise in graphic design ensures visually appealing and impactful projects."
+      },
+      "application": {
+        "title": "Application",
+        "description": "I specialize in developing user-friendly and efficient software applications."
+      },
+      "security": {
+        "title": "Security",
+        "description": "I prioritize security measures in all software projects, ensuring data integrity and user privacy."
+      },
+      "cloudComputing": {
+        "title": "Cloud Computing",
+        "description": "I harness the power of cloud platforms to deploy scalable and high-performing applications."
+      },
+      "dataAnalysis": {
+        "title": "Data Analysis",
+        "description": "I utilize data analytics to derive actionable insights and drive informed decision-making."
+      }
+    },
+    "servicesSection": {
+    "sectionTitle": "Services I Offer",
+    "sectionDescription": "Comprehensive software solutions tailored to your business needs. From concept to deployment, I deliver high-quality applications that drive results.",
+    "fullStackWeb": {
+      "title": "Full Stack Web Development",
+      "description": "Complete web applications using React, Next.js, Node.js, Laravel, and .NET",
+      "features": ["Responsive Design", "API Integration", "Database Design", "Performance Optimization"]
+    },
+    "mobileApp": {
+      "title": "Mobile App Development",
+      "description": "Cross-platform mobile apps with React Native and modern frameworks",
+      "features": ["iOS & Android", "Native Performance", "Push Notifications", "Offline Support"]
+    },
+    "databaseManagement": {
+      "title": "Database Management",
+      "description": "Efficient database design, optimization, and management solutions",
+      "features": ["MongoDB", "PostgreSQL", "MySQL", "Data Migration"]
+    },
+    "cloudSolutions": {
+      "title": "Cloud Solutions",
+      "description": "Scalable cloud architecture and deployment strategies",
+      "features": ["AWS", "Firebase", "Docker", "CI/CD Pipelines"]
+    },
+    "uiUxDesign": {
+      "title": "UI/UX Design",
+      "description": "Modern, user-friendly interfaces with great user experience",
+      "features": ["Figma Design", "Tailwind CSS", "Material-UI", "Interactive Prototypes"]
+    },
+    "systemIntegration": {
+      "title": "System Integration",
+      "description": "Seamless integration with third-party services and APIs",
+      "features": ["Payment Gateways", "Social Media APIs", "CRM Integration", "Custom APIs"]
+    },
+    "cta": {
+      "description": "Ready to bring your project to life?",
+      "button": "Get Started Today"
+    }
+    },
+    "techStack": {
+    "sectionTitle": "Technology Stack",
+    "sectionDescription": "Cutting-edge technologies and tools I use to build exceptional software solutions",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend", 
+      "mobile": "Mobile",
+      "database": "Database",
+      "tools": "Tools & Cloud"
+    },
+    "stats": {
+      "technologiesMastered": "Technologies Mastered",
+      "projectsCompleted": "Projects Completed",
+      "yearsExperience": "Years Experience",
+      "happyClients": "Happy Clients"
+    }
+    },
+    "caseStudies": {
+    "sectionTitle": "Case Studies",
+    "sectionDescription": "Deep dive into real projects I've delivered. See the challenges, solutions, and results achieved for my clients.",
+    "labels": {
+      "duration": "Duration",
+      "team": "Team",
+      "techStack": "Tech Stack",
+      "tools": "tools",
+      "challenge": "Challenge",
+      "solution": "Solution",
+      "technologiesUsed": "Technologies Used",
+      "keyFeatures": "Key Features",
+      "resultsAchieved": "Results Achieved",
+      "viewLiveProject": "View Live Project"
+    },
+    "projects": {
+      "layandent": {
+        "title": "LayandDent - Dental E-Commerce Platform",
+        "subtitle": "Leading Saudi dental supplies company",
+        "category": "E-Commerce",
+        "duration": "1 months",
+        "team": "Solo Developer",
+        "problem": "LayandDent needed a modern e-commerce platform to showcase and sell dental equipment and supplies to healthcare professionals across Saudi Arabia.",
+        "solution": "Developed a comprehensive e-commerce solution with product catalog, inventory management, user authentication, and payment integration.",
+        "results": [
+          "40% increase in online sales",
+          "Improved user experience",
+          "Mobile-responsive design",
+          "Integrated payment system"
+        ],
+        "features": [
+          "Product catalog with advanced filtering",
+          "User account management",
+          "Shopping cart and checkout",
+          "Admin panel for inventory",
+          "Arabic/English language support",
+          "Mobile-responsive design"
+        ]
+      },
+      "amwall": {
+        "title": "Amwall - Financial Consulting Platform",
+        "subtitle": "Business consultant for foreign companies in Turkey",
+        "category": "Business Platform",
+        "duration": "1 months",
+        "team": "Solo Developer",
+        "problem": "Amwall needed a professional platform to showcase their financial and tax consulting services for foreign companies operating in Turkey.",
+        "solution": "Created a modern, professional website with service showcases, client portal, and multilingual support for Turkish and English speakers.",
+        "results": [
+          "Professional online presence",
+          "Increased client inquiries by 60%",
+          "Multilingual support",
+          "SEO optimized"
+        ],
+        "features": [
+          "Service portfolio display",
+          "Client testimonials",
+          "Contact forms",
+          "Multilingual support (TR/EN)",
+          "SEO optimization",
+          "Responsive design"
+        ]
+      },
+      "storeIt": {
+        "title": "Store It - File Management Platform",
+        "subtitle": "Cloud-based file upload and management solution",
+        "category": "SaaS Platform",
+        "duration": "2 week",
+        "team": "Solo Developer",
+        "problem": "Users needed a secure, easy-to-use platform for uploading, managing, and sharing files with advanced security features and user authentication.",
+        "solution": "Built a comprehensive file management system with drag-and-drop uploads, folder organization, sharing capabilities, and robust security.",
+        "results": [
+          "Secure file management",
+          "User authentication system",
+          "File sharing capabilities",
+          "Drag-and-drop interface"
+        ],
+        "features": [
+          "Drag-and-drop file uploads",
+          "Folder organization",
+          "File sharing with permissions",
+          "User authentication (OTP)",
+          "File preview capabilities",
+          "Storage analytics dashboard"
+        ]
+      },
+      "liveDoc": {
+        "title": "Live Documentation Platform",
+        "subtitle": "Real-time collaborative document editing",
+        "category": "Collaboration Tool",
+        "duration": "1 week",
+        "team": "Solo Developer",
+        "problem": "Teams needed a platform for creating, editing, and sharing documents in real-time with multiple collaborators.",
+        "solution": "Developed a real-time document collaboration platform with live editing, commenting, and sharing features.",
+        "results": [
+          "Real-time collaboration",
+          "Improved team productivity",
+          "Document version control",
+          "User-friendly interface"
+        ],
+        "features": [
+          "Real-time document editing",
+          "Multiple user collaboration",
+          "Comment system",
+          "Document sharing",
+          "Version history",
+          "Export capabilities"
+        ]
+      }
+    },
+    "cta": {
+      "title": "Interested in Similar Results?",
+      "description": "Every project is unique, but the approach remains consistent: understanding your needs, crafting the right solution, and delivering exceptional results.",
+      "button": "Start Your Project"
+    }
+    },
+    "timeline": {
+    "sectionTitle": "My Professional Journey",
+    "sectionDescription": "Explore my career timeline and the key projects I've worked on throughout my professional journey. Each project represents a milestone in my growth as a software engineer.",
+    "visitButton": "Visit",
+    "projects": {
+      "layandent2025": {
+        "description1": "LayandDent, A leading Saudi company in dental supplies and equipment, we strive to be the first choice for our doctors.",
+        "description2": ""
+      },
+      "amwall2025": {
+        "description1": "Amwall, Your business Consultant. - Financial and tax consulting for foreign companies in Türkiye",
+        "description2": "I am pleased to share with you Amwall, an advanced platform designed for financial consulting in Türkiye."
+      },
+      "storeIt2025": {
+        "description1": "Store It - Your Go-To File Upload and Management Solution",
+        "description2": "I'm excited to share Store It, a cutting-edge platform designed for seamless file uploading and management."
+      },
+      "liveDoc2024": {
+        "description1": "Live Documentation",
+        "description2": "Write, Edit and Share easily Your Document"
+      },
+      "ecommerce2024": {
+        "description1": "ECommerce App with Admin Panel",
+        "description2": "I'm excited to share that I've completed the MERN Stack Full Course, where I built a fully functional ECommerce application!"
+      },
+      "aceternity2023": {
+        "description1": "Built and launched Aceternity UI and Aceternity UI Pro from scratch, Full Stack Project"
+      },
+      "solo2023": {
+        "description1": "Built and launched Aceternity UI and Aceternity UI Pro from scratch, Full Stack Project"
+      }
+    }
+    },
+    "process": {
+    "sectionTitle": "My Work Process",
+    "sectionDescription": "A systematic approach to deliver exceptional software solutions from concept to completion",
+    "steps": {
+      "discovery": {
+        "title": "Discovery & Planning",
+        "description": "Understanding your requirements, goals, and technical specifications",
+        "duration": "1-2 weeks",
+        "details": [
+          "Requirement analysis",
+          "Technology consultation",
+          "Project timeline",
+          "Resource planning"
+        ]
+      },
+      "design": {
+        "title": "Design & Architecture",
+        "description": "Creating wireframes, UI/UX designs, and system architecture",
+        "duration": "1-3 weeks",
+        "details": [
+          "User experience design",
+          "System architecture",
+          "Database design",
+          "API planning"
+        ]
+      },
+      "development": {
+        "title": "Development",
+        "description": "Building your application with clean, maintainable, and scalable code",
+        "duration": "4-12 weeks",
+        "details": [
+          "Frontend development",
+          "Backend development",
+          "Database implementation",
+          "API integration"
+        ]
+      },
+      "testing": {
+        "title": "Testing & Quality Assurance",
+        "description": "Comprehensive testing to ensure reliability and performance",
+        "duration": "1-2 weeks",
+        "details": [
+          "Unit testing",
+          "Integration testing",
+          "Performance testing",
+          "Security testing"
+        ]
+      },
+      "deployment": {
+        "title": "Deployment",
+        "description": "Launching your application with proper monitoring and documentation",
+        "duration": "1 week",
+        "details": [
+          "Production deployment",
+          "Performance monitoring",
+          "Documentation",
+          "Team training"
+        ]
+      },
+      "maintenance": {
+        "title": "Maintenance & Support",
+        "description": "Ongoing support, updates, and feature enhancements",
+        "duration": "Ongoing",
+        "details": [
+          "Bug fixes",
+          "Feature updates",
+          "Performance optimization",
+          "Technical support"
+        ]
+      }
+    },
+    "cta": {
+      "title": "Ready to Start Your Project?",
+      "description": "Let's discuss your requirements and create a customized development plan that fits your needs and timeline.",
+      "startProject": "Start a Project",
+      "scheduleConsultation": "Schedule Consultation"
+    }
+    },
+    "statistics": {
+    "title": "By the Numbers",
+    "description": "Here's a snapshot of my journey and achievements in software engineering. Numbers tell a story of dedication, growth, and success.",
+    "mainStats": {
+      "projectsCompleted": {
+        "label": "Projects Completed",
+        "description": "Successfully delivered projects across various industries"
+      },
+      "happyClients": {
+        "label": "Happy Clients", 
+        "description": "Satisfied clients who trust my expertise"
+      },
+      "yearsExperience": {
+        "label": "Years Experience",
+        "description": "Building software solutions and growing expertise"
+      },
+      "technologies": {
+        "label": "Technologies",
+        "description": "Mastered across frontend, backend, and mobile"
+      }
+    },
+    "achievements": {
+      "fullStackExpertise": {
+        "title": "Full Stack Expertise",
+        "description": "Proficient in end-to-end application development"
+      },
+      "clientSatisfaction": {
+        "title": "Client Satisfaction", 
+        "description": "Average client satisfaction rating"
+      },
+      "onTimeDelivery": {
+        "title": "On-Time Delivery",
+        "description": "Projects delivered within agreed timeframes"
+      },
+      "performanceImprovement": {
+        "title": "Performance Improvement",
+        "description": "Average performance boost in client applications"
+      }
+    },
+    "additionalStats": {
+      "title": "Fun Facts & Metrics",
+      "linesOfCode": "Lines of Code Written",
+      "coffeeCups": "Coffee Cups",
+      "githubCommits": "GitHub Commits", 
+      "bugsFixed": "Bugs Fixed"
+    },
+    "quote": {
+      "text": "Success is not just about the numbers, but about the impact we create and the problems we solve. Every line of code, every project, and every satisfied client represents a step forward in this journey.",
+      "name": "Abdullah Alhasan",
+      "title": "Software Engineer"
+    }
+    },
+     "testimonials": {
+    "client1": {
+      "quote": "Abdullah Alhasan's expertise and innovative approach transformed our project. His technical skills and attention to detail are second to none.",
+      "name": "Client 1",
+      "title": "Business Owner"
+    },
+    "client2": {
+      "quote": "Working with Abdullah was an absolute pleasure. His ability to solve complex problems and deliver high-quality solutions on time was impressive.",
+      "name": "Client 2", 
+      "title": "Software Developer"
+    },
+    "client3": {
+      "quote": "Abdullah's dedication to his craft and his deep understanding of software engineering made our collaboration seamless and productive.",
+      "name": "Client 3",
+      "title": "Tech Lead"
+    },
+    "client4": {
+      "quote": "From the initial idea to the final implementation, Abdullah provided invaluable insights that elevated the project to a whole new level.",
+      "name": "Client 4",
+      "title": "Project Manager"
+    },
+    "client5": {
+      "quote": "Abdullah is a skilled and reliable engineer who consistently exceeds expectations. I would highly recommend him for any software development needs.",
+      "name": "Client 5",
+      "title": "Startup Founder"
+    }
+    },
+    "skills": {
+  "title": "My Skills & Expertise",
+  "categories": {
+    "frontend": {
+      "title": "Frontend",
+      "description": "Creating responsive and interactive user interfaces"
+    },
+    "backend": {
+      "title": "Backend", 
+      "description": "Building robust server-side applications"
+    },
+    "database": {
+      "title": "Database",
+      "description": "Managing and optimizing data storage"
+    },
+    "tools": {
+      "title": "Tools & Methods",
+      "description": "Using modern tools and methodologies"
+    },
+    "other": {
+      "title": "Other",
+      "description": "Additional skills and competencies"
+    }
+  },
+  "skillNames": {
+    "react": "React",
+    "typescript": "TypeScript", 
+    "nextjs": "Next.js",
+    "tailwind": "Tailwind CSS",
+    "javascript": "JavaScript",
+    "htmlcss": "HTML/CSS",
+    "nodejs": "Node.js",
+    "express": "Express",
+    "python": "Python",
+    "django": "Django", 
+    "laravel": "Laravel",
+    "nestjs": "Nest.js",
+    "mongodb": "MongoDB",
+    "postgresql": "PostgreSQL",
+    "mysql": "MySQL",
+    "nosql": "NoSQL",
+    "firebase": "Firebase",
+    "git": "Git",
+    "jira": "Jira", 
+    "figma": "Figma",
+    "notion": "Notion",
+    "testing": "Testing",
+    "restfulapis": "RESTful APIs",
+    "problemsolving": "Problem Solving",
+    "communication": "Communication",
+    "teamleadership": "Team Leadership",
+    "projectmanagement": "Project Management",
+    "uiuxdesign": "UI/UX Design",
+    "performanceoptimization": "Performance Optimization",
+    "github": "GitHub"
+  }
+    },
+    "contact": {
+  "title": "Let's Work Together",
+  "description": "Have a project in mind? I'd love to hear about it. Send me a message and let's start building something amazing together.",
+  "getInTouch": {
+    "title": "Get in Touch",
+    "description": "I'm always open to discussing new opportunities, interesting projects, and creative challenges. Whether you're a startup looking to build your first app or an established company seeking to modernize your systems, I'm here to help."
+  },
+  "contactInfo": {
+    "email": "Email",
+    "phone": "Phone", 
+    "location": "Location",
+    "responseTime": "Response Time",
+    "responseTimeValue": "Within 24 hours"
+  },
+  "whyWorkWithMe": {
+    "title": "Why Work With Me?",
+    "stats": {
+      "projectsDelivered": "Projects Delivered",
+      "clientSatisfaction": "Client Satisfaction", 
+      "yearsExperience": "Years Experience",
+      "technologies": "Technologies"
+    }
+  },
+  "form": {
+    "placeholders": {
+      "name": "Your Name *",
+      "email": "Your Email *",
+      "company": "Company (Optional)",
+      "subject": "Subject *",
+      "message": "Tell me about your project... *"
+    },
+    "projectType": {
+      "label": "Project Type",
+      "options": {
+        "web": "Web Development",
+        "mobile": "Mobile App", 
+        "fullstack": "Full Stack",
+        "consultation": "Consultation",
+        "other": "Other"
+      }
+    },
+    "buttons": {
+      "send": "Send Message",
+      "sending": "Sending..."
+    },
+    "successMessage": "Thank you for your message! I'll get back to you soon."
+  }
+    }
+ 
+}

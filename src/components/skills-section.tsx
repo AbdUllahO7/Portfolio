@@ -2,12 +2,14 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
+import { useTranslation } from "react-i18next"
 import { Code2, Database, Server, Layers, GitBranch } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 export default function SkillsSection() {
+  const { t } = useTranslation()
   const [activeTab, setActiveTab] = useState("frontend")
 
   const container = {
@@ -37,72 +39,72 @@ export default function SkillsSection() {
   const skillCategories = [
     {
       id: "frontend",
-      title: "Frontend",
+      title: t('skills.categories.frontend.title'),
       icon: <Code2 className="h-5 w-5" />,
-      description: "Creating responsive and interactive user interfaces",
+      description: t('skills.categories.frontend.description'),
       skills: [
-        { name: "React", level: 90 },
-        { name: "TypeScript", level: 85 },
-        { name: "Next.js", level: 80 },
-        { name: "Tailwind CSS", level: 85 },
-        { name: "JavaScript", level: 95 },
-        { name: "HTML/CSS", level: 90 },
+        { name: t('skills.skillNames.react'), level: 90 },
+        { name: t('skills.skillNames.typescript'), level: 85 },
+        { name: t('skills.skillNames.nextjs'), level: 80 },
+        { name: t('skills.skillNames.tailwind'), level: 85 },
+        { name: t('skills.skillNames.javascript'), level: 95 },
+        { name: t('skills.skillNames.htmlcss'), level: 90 },
       ],
     },
     {
       id: "backend",
-      title: "Backend",
+      title: t('skills.categories.backend.title'),
       icon: <Server className="h-5 w-5" />,
-      description: "Building robust server-side applications",
+      description: t('skills.categories.backend.description'),
       skills: [
-        { name: "Node.js", level: 85 },
-        { name: "Express", level: 80 },
-        { name: "Python", level: 75 },
-        { name: "Django", level: 70 },
-        { name: "Laravel", level: 80 },
-        { name: "Nest.js", level: 60 },
+        { name: t('skills.skillNames.nodejs'), level: 85 },
+        { name: t('skills.skillNames.express'), level: 80 },
+        { name: t('skills.skillNames.python'), level: 75 },
+        { name: t('skills.skillNames.django'), level: 70 },
+        { name: t('skills.skillNames.laravel'), level: 80 },
+        { name: t('skills.skillNames.nestjs'), level: 60 },
       ],
     },
     {
       id: "database",
-      title: "Database",
+      title: t('skills.categories.database.title'),
       icon: <Database className="h-5 w-5" />,
-      description: "Managing and optimizing data storage",
+      description: t('skills.categories.database.description'),
       skills: [
-        { name: "MongoDB", level: 90 },
-        { name: "PostgreSQL", level: 75 },
-        { name: "MySQL", level: 85 },
-        { name: "NoSQL", level: 85 },
-        { name: "Firebase", level: 75 },
+        { name: t('skills.skillNames.mongodb'), level: 90 },
+        { name: t('skills.skillNames.postgresql'), level: 75 },
+        { name: t('skills.skillNames.mysql'), level: 85 },
+        { name: t('skills.skillNames.nosql'), level: 85 },
+        { name: t('skills.skillNames.firebase'), level: 75 },
       ],
     },
     {
       id: "tools",
-      title: "Tools & Methods",
+      title: t('skills.categories.tools.title'),
       icon: <Layers className="h-5 w-5" />,
-      description: "Using modern tools and methodologies",
+      description: t('skills.categories.tools.description'),
       skills: [
-        { name: "Git", level: 90 },
-        { name: "Jira", level: 80 },
-        { name: "Figma", level: 75 },
-        { name: "Notion", level: 75 },
-        { name: "Testing", level: 80 },
-        { name: "RESTful APIs", level: 85 },
+        { name: t('skills.skillNames.git'), level: 90 },
+        { name: t('skills.skillNames.jira'), level: 80 },
+        { name: t('skills.skillNames.figma'), level: 75 },
+        { name: t('skills.skillNames.notion'), level: 75 },
+        { name: t('skills.skillNames.testing'), level: 80 },
+        { name: t('skills.skillNames.restfulapis'), level: 85 },
       ],
     },
     {
       id: "other",
-      title: "Other",
+      title: t('skills.categories.other.title'),
       icon: <GitBranch className="h-5 w-5" />,
-      description: "Additional skills and competencies",
+      description: t('skills.categories.other.description'),
       skills: [
-        { name: "Problem Solving", level: 95 },
-        { name: "Communication", level: 90 },
-        { name: "Team Leadership", level: 85 },
-        { name: "Project Management", level: 80 },
-        { name: "UI/UX Design", level: 75 },
-        { name: "Performance Optimization", level: 85 },
-        { name: "GitHub", level: 85 },
+        { name: t('skills.skillNames.problemsolving'), level: 95 },
+        { name: t('skills.skillNames.communication'), level: 90 },
+        { name: t('skills.skillNames.teamleadership'), level: 85 },
+        { name: t('skills.skillNames.projectmanagement'), level: 80 },
+        { name: t('skills.skillNames.uiuxdesign'), level: 75 },
+        { name: t('skills.skillNames.performanceoptimization'), level: 85 },
+        { name: t('skills.skillNames.github'), level: 85 },
       ],
     },
   ]
@@ -130,7 +132,9 @@ export default function SkillsSection() {
       </div>
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight text-white">My Skills & Expertise</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight text-white">
+            {t('skills.title')}
+          </h2>
         </div>
 
         <Tabs defaultValue="frontend" className="w-full" onValueChange={setActiveTab}>
@@ -245,4 +249,3 @@ export default function SkillsSection() {
     </section>
   )
 }
-

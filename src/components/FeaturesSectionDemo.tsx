@@ -2,90 +2,31 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { useState, useMemo, useEffect } from "react"
 import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
-import {
-  IconAppWindow,
-  IconBriefcase,
-  IconBulb,
-  IconChartBar,
-  IconCloudComputing,
-  IconCode,
-  IconPalette,
-  IconShieldLock,
-} from "@tabler/icons-react"
+import { useTranslation } from "react-i18next"
+import { getFeatures } from "@/constants/featuresData"
 
 export function FeaturesSectionDemo() {
+  const { t, i18n } = useTranslation()
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+  const [forceUpdate, setForceUpdate] = useState(0)
 
-  const features = [
-    {
-      title: "Innovative Ideas",
-      description: "I bring innovative ideas to the table, pushing boundaries in software development.",
-      icon: <IconBulb />,
-      color: "from-amber-500 to-yellow-500",
-      bgLight: "bg-amber-50",
-      iconColor: "text-amber-500",
-    },
-    {
-      title: "Software",
-      description:
-        "In software engineering, I leverage cutting-edge technologies to create robust and scalable solutions.",
-      icon: <IconCode />,
-      color: "from-blue-500 to-cyan-500",
-      bgLight: "bg-blue-50",
-      iconColor: "text-blue-500",
-    },
-    {
-      title: "Management",
-      description: "In software management, I excel in coordinating teams and optimizing workflows.",
-      icon: <IconBriefcase />,
-      color: "from-purple-500 to-violet-500",
-      bgLight: "bg-purple-50",
-      iconColor: "text-purple-500",
-    },
-    {
-      title: "Graphic Design",
-      description: "My expertise in graphic design ensures visually appealing and impactful projects.",
-      icon: <IconPalette />,
-      color: "from-pink-500 to-rose-500",
-      bgLight: "bg-pink-50",
-      iconColor: "text-pink-500",
-    },
-    {
-      title: "Application",
-      description: "I specialize in developing user-friendly and efficient software applications.",
-      icon: <IconAppWindow />,
-      color: "from-emerald-500 to-green-500",
-      bgLight: "bg-emerald-50",
-      iconColor: "text-emerald-500",
-    },
-    {
-      title: "Security",
-      description: "I prioritize security measures in all software projects, ensuring data integrity and user privacy.",
-      icon: <IconShieldLock />,
-      color: "from-red-500 to-rose-500",
-      bgLight: "bg-red-50",
-      iconColor: "text-red-500",
-    },
-    {
-      title: "Cloud Computing",
-      description: "I harness the power of cloud platforms to deploy scalable and high-performing applications.",
-      icon: <IconCloudComputing />,
-      color: "from-sky-500 to-blue-500",
-      bgLight: "bg-sky-50",
-      iconColor: "text-sky-500",
-    },
-    {
-      title: "Data Analysis",
-      description: "I utilize data analytics to derive actionable insights and drive informed decision-making.",
-      icon: <IconChartBar />,
-      color: "from-indigo-500 to-violet-500",
-      bgLight: "bg-indigo-50",
-      iconColor: "text-indigo-500",
-    },
-  ]
+  // Force component to re-render when language changes
+  useEffect(() => {
+    const handleLanguageChange = () => {
+      setForceUpdate(prev => prev + 1)
+    }
+
+    i18n.on('languageChanged', handleLanguageChange)
+    
+    return () => {
+      i18n.off('languageChanged', handleLanguageChange)
+    }
+  }, [i18n])
+
+  const features = useMemo(() => getFeatures(t), [t, forceUpdate, i18n.language])
 
   const container = {
     hidden: { opacity: 0 },
@@ -96,8 +37,6 @@ export function FeaturesSectionDemo() {
       },
     },
   }
-
-
 
   return (
     <section className="py-20 px-4 md:px-6  relative overflow-hidden">
@@ -123,9 +62,11 @@ export function FeaturesSectionDemo() {
 
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight dark:text-white text-black">My Expertise</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight dark:text-white text-black">
+            {t('features.sectionTitle')}
+          </h2>
           <p className=" max-w-2xl mx-auto dark:text-white text-black">
-            Delivering innovative software solutions with expertise in development and design. 
+            {t('features.sectionDescription')}
           </p>
         </div>
 
@@ -235,4 +176,3 @@ const Feature = ({
     </motion.div>
   )
 }
-

@@ -1,62 +1,13 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { 
-  Code, 
-  Smartphone, 
-  Database, 
-  Cloud, 
-  Settings, 
-  Palette,
-  Shield,
-  Zap
-} from "lucide-react"
+import { useTranslation } from "react-i18next"
+import { getServices } from "@/constants/servicesData"
+import { useMemo } from "react"
 
 export default function ServicesSection() {
-  const services = [
-    {
-      icon: <Code className="h-8 w-8" />,
-      title: "Full Stack Web Development",
-      description: "Complete web applications using React, Next.js, Node.js, Laravel, and .NET",
-      features: ["Responsive Design", "API Integration", "Database Design", "Performance Optimization"],
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      icon: <Smartphone className="h-8 w-8" />,
-      title: "Mobile App Development",
-      description: "Cross-platform mobile apps with React Native and modern frameworks",
-      features: ["iOS & Android", "Native Performance", "Push Notifications", "Offline Support"],
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      icon: <Database className="h-8 w-8" />,
-      title: "Database Management",
-      description: "Efficient database design, optimization, and management solutions",
-      features: ["MongoDB", "PostgreSQL", "MySQL", "Data Migration"],
-      color: "from-purple-500 to-violet-500"
-    },
-    {
-      icon: <Cloud className="h-8 w-8" />,
-      title: "Cloud Solutions",
-      description: "Scalable cloud architecture and deployment strategies",
-      features: ["AWS", "Firebase", "Docker", "CI/CD Pipelines"],
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      icon: <Palette className="h-8 w-8" />,
-      title: "UI/UX Design",
-      description: "Modern, user-friendly interfaces with great user experience",
-      features: ["Figma Design", "Tailwind CSS", "Material-UI", "Interactive Prototypes"],
-      color: "from-pink-500 to-rose-500"
-    },
-    {
-      icon: <Settings className="h-8 w-8" />,
-      title: "System Integration",
-      description: "Seamless integration with third-party services and APIs",
-      features: ["Payment Gateways", "Social Media APIs", "CRM Integration", "Custom APIs"],
-      color: "from-indigo-500 to-blue-500"
-    }
-  ]
+  const { t } = useTranslation()
+  const services = useMemo(() => getServices(t), [t])
 
   const container = {
     hidden: { opacity: 0 },
@@ -93,7 +44,7 @@ export default function ServicesSection() {
           transition={{
             duration: 20,
             ease: "linear",
-            repeat: Infinity,
+            repeat: Number.POSITIVE_INFINITY,
             repeatType: "reverse",
           }}
           style={{
@@ -107,11 +58,10 @@ export default function ServicesSection() {
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight text-black dark:text-white">
-            Services I Offer
+            {t('servicesSection.sectionTitle')}
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            Comprehensive software solutions tailored to your business needs. From concept to deployment, 
-            I deliver high-quality applications that drive results.
+            {t('servicesSection.sectionDescription')}
           </p>
         </div>
 
@@ -122,7 +72,7 @@ export default function ServicesSection() {
           whileInView="show"
           viewport={{ once: true, margin: "-100px" }}
         >
-          {services.map((service, index) => (
+          {services.map((service) => (
             <motion.div
               key={service.title}
               variants={item}
@@ -169,10 +119,10 @@ export default function ServicesSection() {
           transition={{ delay: 0.5 }}
         >
           <p className="text-gray-400 mb-6">
-            Ready to bring your project to life?
+            {t('servicesSection.cta.description')}
           </p>
           <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-            Get Started Today
+            {t('servicesSection.cta.button')}
           </button>
         </motion.div>
       </div>

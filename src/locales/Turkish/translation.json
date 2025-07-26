@@ -1,0 +1,548 @@
+{
+
+    "header": {
+      "title": "Abdullah",
+      "subtitle": "Yazılım Mühendisi",
+      "navigation": {
+        "home": "Ana Sayfa",
+        "about": "Hakkında",
+        "services": "Hizmetler",
+        "techStack": "Teknoloji Yığını",
+        "caseStudies": "Vaka Çalışmaları",
+        "projects": "Projeler",
+        "process": "Süreç",
+        "skills": "Yetenekler",
+        "contact": "İletişim"
+      },
+      "cta": {
+        "letsTalk": "Konuşalım",
+        "emailMe": "E-posta Gönder"
+      }
+    },
+    "hero": {
+      "greeting": "Merhaba, ben",
+      "name": "Abdullah ALHASAN",
+      "title": "Yazılım Mühendisi",
+      "subtitle": "Modern teknoloji ile yenilikçi çözümler geliştirme",
+      "description": "Temiz kod ve düşünceli tasarım yoluyla olağanüstü dijital deneyimler yaratma konusunda tutkulu."
+    },
+    "services": {
+    "softwareManagement": {
+      "title": "Yazılım Yönetimi",
+      "description": "Yazılım geliştirme, dağıtım ve bakımını verimli bir şekilde denetleme."
+    },
+    "webFullStack": {
+      "title": "Web Full Stack",
+      "description": "Web uygulamaları için hem ön uç hem de arka uç geliştirme."
+    },
+    "applicationsFullStack": {
+      "title": "Uygulama Full Stack",
+      "description": "UI'dan sunucuya kadar eksiksiz uygulamalar oluşturma ve yönetme."
+    },
+    "databaseManager": {
+      "title": "Veritabanı Yöneticisi",
+      "description": "Veritabanlarını etkili bir şekilde organize etme, yönetme ve optimize etme."
+    }
+    },
+    "features": {
+      "sectionTitle": "Uzmanlığım",
+      "sectionDescription": "Geliştirme ve tasarımdaki uzmanlıkla yenilikçi yazılım çözümleri sunuyorum.",
+      "innovativeIdeas": {
+        "title": "Yenilikçi Fikirler",
+        "description": "Yazılım geliştirmede sınırları zorlayan yenilikçi fikirler getiriyorum."
+      },
+      "software": {
+        "title": "Yazılım",
+        "description": "Yazılım mühendisliğinde, sağlam ve ölçeklenebilir çözümler oluşturmak için en son teknolojileri kullanıyorum."
+      },
+      "management": {
+        "title": "Yönetim",
+        "description": "Yazılım yönetiminde, takımları koordine etme ve iş akışlarını optimize etmede üstünüm."
+      },
+      "graphicDesign": {
+        "title": "Grafik Tasarım",
+        "description": "Grafik tasarımdaki uzmanlığım, görsel olarak çekici ve etkili projeler sağlar."
+      },
+      "application": {
+        "title": "Uygulama",
+        "description": "Kullanıcı dostu ve verimli yazılım uygulamaları geliştirme konusunda uzmanım."
+      },
+      "security": {
+        "title": "Güvenlik",
+        "description": "Tüm yazılım projelerinde güvenlik önlemlerini önceleyerek veri bütünlüğü ve kullanıcı gizliliğini sağlarım."
+      },
+      "cloudComputing": {
+        "title": "Bulut Bilişim",
+        "description": "Ölçeklenebilir ve yüksek performanslı uygulamalar dağıtmak için bulut platformlarının gücünden yararlanıyorum."
+      },
+      "dataAnalysis": {
+        "title": "Veri Analizi",
+        "description": "Uygulanabilir içgörüler elde etmek ve bilinçli karar vermeyi desteklemek için veri analitiği kullanıyorum."
+      }
+    },
+    "servicesSection": {
+        "sectionTitle": "Sunduğum Hizmetler",
+        "sectionDescription": "İş ihtiyaçlarınıza özel kapsamlı yazılım çözümleri. Konseptten dağıtıma kadar sonuç getiren yüksek kaliteli uygulamalar sunuyorum.",
+        "fullStackWeb": {
+          "title": "Full Stack Web Geliştirme",
+          "description": "React, Next.js, Node.js, Laravel ve .NET kullanarak eksiksiz web uygulamaları",
+          "features": ["Duyarlı Tasarım", "API Entegrasyonu", "Veritabanı Tasarımı", "Performans Optimizasyonu"]
+        },
+        "mobileApp": {
+          "title": "Mobil Uygulama Geliştirme",
+          "description": "React Native ve modern çerçevelerle çapraz platform mobil uygulamalar",
+          "features": ["iOS ve Android", "Doğal Performans", "Push Bildirimleri", "Çevrimdışı Destek"]
+        },
+        "databaseManagement": {
+          "title": "Veritabanı Yönetimi",
+          "description": "Verimli veritabanı tasarımı, optimizasyonu ve yönetim çözümleri",
+          "features": ["MongoDB", "PostgreSQL", "MySQL", "Veri Taşıma"]
+        },
+        "cloudSolutions": {
+          "title": "Bulut Çözümleri",
+          "description": "Ölçeklenebilir bulut mimarisi ve dağıtım stratejileri",
+          "features": ["AWS", "Firebase", "Docker", "CI/CD Pipeline'ları"]
+        },
+        "uiUxDesign": {
+          "title": "UI/UX Tasarım",
+          "description": "Harika kullanıcı deneyimi ile modern, kullanıcı dostu arayüzler",
+          "features": ["Figma Tasarım", "Tailwind CSS", "Material-UI", "Etkileşimli Prototipler"]
+        },
+        "systemIntegration": {
+          "title": "Sistem Entegrasyonu",
+          "description": "Üçüncü taraf hizmetler ve API'lar ile sorunsuz entegrasyon",
+          "features": ["Ödeme Geçitleri", "Sosyal Medya API'ları", "CRM Entegrasyonu", "Özel API'lar"]
+        },
+        "cta": {
+          "description": "Projenizi hayata geçirmeye hazır mısınız?",
+          "button": "Bugün Başlayın"
+        }
+    },
+    "techStack": {
+    "sectionTitle": "Teknoloji Yığını",
+    "sectionDescription": "Mükemmel yazılım çözümleri oluşturmak için kullandığım son teknoloji araçlar ve teknolojiler",
+    "categories": {
+      "frontend": "Ön Uç",
+      "backend": "Arka Uç",
+      "mobile": "Mobil",
+      "database": "Veritabanı",
+      "tools": "Araçlar ve Bulut"
+    },
+    "stats": {
+      "technologiesMastered": "Öğrenilen Teknolojiler",
+      "projectsCompleted": "Tamamlanan Projeler",
+      "yearsExperience": "Yıllık Deneyim",
+      "happyClients": "Mutlu Müşteriler"
+    }
+    },
+    "caseStudies": {
+    "sectionTitle": "Vaka Çalışmaları",
+    "sectionDescription": "Teslim ettiğim gerçek projelere derinlemesine bakış. Müşterilerim için karşılaştığım zorlukları, çözümleri ve elde edilen sonuçları görün.",
+    "labels": {
+      "duration": "Süre",
+      "team": "Ekip",
+      "techStack": "Teknoloji Yığını",
+      "tools": "araç",
+      "challenge": "Zorluk",
+      "solution": "Çözüm",
+      "technologiesUsed": "Kullanılan Teknolojiler",
+      "keyFeatures": "Temel Özellikler",
+      "resultsAchieved": "Elde Edilen Sonuçlar",
+      "viewLiveProject": "Canlı Projeyi Görüntüle"
+    },
+    "projects": {
+      "layandent": {
+        "title": "LayandDent - Diş Hekimliği E-Ticaret Platformu",
+        "subtitle": "Suudi Arabistan'ın önde gelen diş malzemeleri şirketi",
+        "category": "E-Ticaret",
+        "duration": "1 ay",
+        "team": "Tek Geliştirici",
+        "problem": "LayandDent, Suudi Arabistan genelindeki sağlık profesyonellerine diş ekipmanları ve malzemeleri sergilemek ve satmak için modern bir e-ticaret platformuna ihtiyaç duyuyordu.",
+        "solution": "Ürün katalogu, envanter yönetimi, kullanıcı kimlik doğrulaması ve ödeme entegrasyonu ile kapsamlı bir e-ticaret çözümü geliştirdim.",
+        "results": [
+          "Online satışlarda %40 artış",
+          "Gelişmiş kullanıcı deneyimi",
+          "Mobil duyarlı tasarım",
+          "Entegre ödeme sistemi"
+        ],
+        "features": [
+          "Gelişmiş filtreleme ile ürün katalogu",
+          "Kullanıcı hesap yönetimi",
+          "Alışveriş sepeti ve ödeme",
+          "Envanter için yönetici paneli",
+          "Arapça/İngilizce dil desteği",
+          "Mobil duyarlı tasarım"
+        ]
+      },
+      "amwall": {
+        "title": "Amwall - Finansal Danışmanlık Platformu",
+        "subtitle": "Türkiye'deki yabancı şirketler için iş danışmanı",
+        "category": "İş Platformu",
+        "duration": "1 ay",
+        "team": "Tek Geliştirici",
+        "problem": "Amwall, Türkiye'de faaliyet gösteren yabancı şirketler için finansal ve vergi danışmanlık hizmetlerini sergilemek için profesyonel bir platforma ihtiyaç duyuyordu.",
+        "solution": "Hizmet vitrinleri, müşteri portalı ve Türkçe ve İngilizce konuşanlar için çok dilli destek ile modern, profesyonel bir web sitesi oluşturdum.",
+        "results": [
+          "Profesyonel online varlık",
+          "Müşteri sorularında %60 artış",
+          "Çok dilli destek",
+          "SEO optimize edilmiş"
+        ],
+        "features": [
+          "Hizmet portföyü gösterimi",
+          "Müşteri referansları",
+          "İletişim formları",
+          "Çok dilli destek (TR/EN)",
+          "SEO optimizasyonu",
+          "Duyarlı tasarım"
+        ]
+      },
+      "storeIt": {
+        "title": "Store It - Dosya Yönetim Platformu",
+        "subtitle": "Bulut tabanlı dosya yükleme ve yönetim çözümü",
+        "category": "SaaS Platformu",
+        "duration": "2 hafta",
+        "team": "Tek Geliştirici",
+        "problem": "Kullanıcılar, gelişmiş güvenlik özellikleri ve kullanıcı kimlik doğrulaması ile dosya yükleme, yönetme ve paylaşma için güvenli, kullanımı kolay bir platforma ihtiyaç duyuyorlardı.",
+        "solution": "Sürükle ve bırak yüklemeleri, klasör organizasyonu, paylaşım yetenekleri ve sağlam güvenlik ile kapsamlı bir dosya yönetim sistemi oluşturdum.",
+        "results": [
+          "Güvenli dosya yönetimi",
+          "Kullanıcı kimlik doğrulama sistemi",
+          "Dosya paylaşım yetenekleri",
+          "Sürükle ve bırak arayüzü"
+        ],
+        "features": [
+          "Sürükle ve bırak dosya yüklemeleri",
+          "Klasör organizasyonu",
+          "İzinlerle dosya paylaşımı",
+          "Kullanıcı kimlik doğrulaması (OTP)",
+          "Dosya önizleme yetenekleri",
+          "Depolama analitik panosu"
+        ]
+      },
+      "liveDoc": {
+        "title": "Live Documentation Platform",
+        "subtitle": "Gerçek zamanlı işbirlikçi doküman düzenleme",
+        "category": "İşbirliği Aracı",
+        "duration": "1 hafta",
+        "team": "Tek Geliştirici",
+        "problem": "Takımlar, birden fazla işbirlikçi ile gerçek zamanlı olarak doküman oluşturma, düzenleme ve paylaşma platformuna ihtiyaç duyuyorlardı.",
+        "solution": "Canlı düzenleme, yorum yapma ve paylaşım özellikleri ile gerçek zamanlı doküman işbirliği platformu geliştirdim.",
+        "results": [
+          "Gerçek zamanlı işbirliği",
+          "Gelişmiş takım verimliliği",
+          "Doküman versiyon kontrolü",
+          "Kullanıcı dostu arayüz"
+        ],
+        "features": [
+          "Gerçek zamanlı doküman düzenleme",
+          "Çoklu kullanıcı işbirliği",
+          "Yorum sistemi",
+          "Doküman paylaşımı",
+          "Versiyon geçmişi",
+          "Dışa aktarma yetenekleri"
+        ]
+      }
+    },
+    "cta": {
+      "title": "Benzer Sonuçlarla İlgileniyor musunuz?",
+      "description": "Her proje benzersizdir, ancak yaklaşım tutarlı kalır: ihtiyaçlarınızı anlama, doğru çözümü oluşturma ve olağanüstü sonuçlar sunma.",
+      "button": "Projenizi Başlatın"
+    }
+    },
+    "timeline": {
+    "sectionTitle": "Profesyonel Yolculuğum",
+    "sectionDescription": "Profesyonel yolculuğum boyunca çalıştığım kariyar zaman çizelgemi ve temel projeleri keşfedin. Her proje, yazılım mühendisi olarak büyümemde bir dönüm noktasını temsil ediyor.",
+    "visitButton": "Ziyaret Et",
+    "projects": {
+      "layandent2025": {
+        "description1": "LayandDent, diş malzemeleri ve ekipmanlarında önde gelen Suudi şirketi, doktorlarımızın ilk tercihi olmaya çalışıyoruz.",
+        "description2": ""
+      },
+      "amwall2025": {
+        "description1": "Amwall, İş Danışmanınız. - Türkiye'deki yabancı şirketler için finansal ve vergi danışmanlığı",
+        "description2": "Türkiye'de finansal danışmanlık için tasarlanmış gelişmiş bir platform olan Amwall'u sizinle paylaşmaktan memnuniyet duyuyorum."
+      },
+      "storeIt2025": {
+        "description1": "Store It - Dosya Yükleme ve Yönetim Çözümünüz",
+        "description2": "Sorunsuz dosya yükleme ve yönetimi için tasarlanmış son teknoloji platform Store It'i paylaşmaktan heyecan duyuyorum."
+      },
+      "liveDoc2024": {
+        "description1": "Canlı Dokümantasyon",
+        "description2": "Dokümanınızı kolayca yazın, düzenleyin ve paylaşın"
+      },
+      "ecommerce2024": {
+        "description1": "Yönetici Panelli E-Ticaret Uygulaması",
+        "description2": "MERN Stack Full Course'u tamamladığımı paylaşmaktan heyecan duyuyorum, tam işlevli bir E-Ticaret uygulaması oluşturdum!"
+      },
+      "aceternity2023": {
+        "description1": "Aceternity UI ve Aceternity UI Pro'yu sıfırdan inşa ettim ve başlattım, Full Stack Proje"
+      },
+      "solo2023": {
+        "description1": "Aceternity UI ve Aceternity UI Pro'yu sıfırdan inşa ettim ve başlattım, Full Stack Proje"
+      }
+    }
+    },
+    "process": {
+    "sectionTitle": "Çalışma Sürecim",
+    "sectionDescription": "Konseptten tamamlanmaya kadar olağanüstü yazılım çözümleri sunmak için sistematik bir yaklaşım",
+    "steps": {
+      "discovery": {
+        "title": "Keşif ve Planlama",
+        "description": "Gereksinimlerinizi, hedeflerinizi ve teknik özelliklerinizi anlama",
+        "duration": "1-2 hafta",
+        "details": [
+          "Gereksinim analizi",
+          "Teknoloji danışmanlığı",
+          "Proje zaman çizelgesi",
+          "Kaynak planlama"
+        ]
+      },
+      "design": {
+        "title": "Tasarım ve Mimari",
+        "description": "Wireframe'ler, UI/UX tasarımları ve sistem mimarisi oluşturma",
+        "duration": "1-3 hafta",
+        "details": [
+          "Kullanıcı deneyimi tasarımı",
+          "Sistem mimarisi",
+          "Veritabanı tasarımı",
+          "API planlama"
+        ]
+      },
+      "development": {
+        "title": "Geliştirme",
+        "description": "Temiz, sürdürülebilir ve ölçeklenebilir kod ile uygulamanızı oluşturma",
+        "duration": "4-12 hafta",
+        "details": [
+          "Frontend geliştirme",
+          "Backend geliştirme",
+          "Veritabanı implementasyonu",
+          "API entegrasyonu"
+        ]
+      },
+      "testing": {
+        "title": "Test ve Kalite Güvence",
+        "description": "Güvenilirlik ve performansı sağlamak için kapsamlı test",
+        "duration": "1-2 hafta",
+        "details": [
+          "Birim testi",
+          "Entegrasyon testi",
+          "Performans testi",
+          "Güvenlik testi"
+        ]
+      },
+      "deployment": {
+        "title": "Dağıtım",
+        "description": "Uygun izleme ve dokümantasyon ile uygulamanızı başlatma",
+        "duration": "1 hafta",
+        "details": [
+          "Üretim dağıtımı",
+          "Performans izleme",
+          "Dokümantasyon",
+          "Ekip eğitimi"
+        ]
+      },
+      "maintenance": {
+        "title": "Bakım ve Destek",
+        "description": "Sürekli destek, güncellemeler ve özellik geliştirmeleri",
+        "duration": "Devam eden",
+        "details": [
+          "Hata düzeltmeleri",
+          "Özellik güncellemeleri",
+          "Performans optimizasyonu",
+          "Teknik destek"
+        ]
+      }
+    },
+    "cta": {
+      "title": "Projenizi Başlatmaya Hazır mısınız?",
+      "description": "Gereksinimlerinizi tartışalım ve ihtiyaçlarınıza ve zaman çizelgenize uygun özelleştirilmiş bir geliştirme planı oluşturalım.",
+      "startProject": "Proje Başlat",
+      "scheduleConsultation": "Danışmanlık Planla"
+    }
+    },
+    "statistics": {
+    "title": "Rakamlarla",
+    "description": "Yazılım mühendisliğindeki yolculuğumun ve başarılarımın bir özeti. Rakamlar adanmışlık, büyüme ve başarının hikayesini anlatır.",
+    "mainStats": {
+      "projectsCompleted": {
+        "label": "Tamamlanan Projeler",
+        "description": "Çeşitli sektörlerde başarıyla teslim edilen projeler"
+      },
+      "happyClients": {
+        "label": "Mutlu Müşteriler",
+        "description": "Uzmanlığıma güvenen memnun müşteriler"
+      },
+      "yearsExperience": {
+        "label": "Yıllık Deneyim",
+        "description": "Yazılım çözümleri geliştirme ve uzmanlık kazanma"
+      },
+      "technologies": {
+        "label": "Teknolojiler",
+        "description": "Frontend, backend ve mobil alanlarında uzmanlaşma"
+      }
+    },
+    "achievements": {
+      "fullStackExpertise": {
+        "title": "Full Stack Uzmanlığı",
+        "description": "Uçtan uca uygulama geliştirmede yetkin"
+      },
+      "clientSatisfaction": {
+        "title": "Müşteri Memnuniyeti",
+        "description": "Ortalama müşteri memnuniyet oranı"
+      },
+      "onTimeDelivery": {
+        "title": "Zamanında Teslimat",
+        "description": "Üzerinde anlaşılan zaman çerçevesinde teslim edilen projeler"
+      },
+      "performanceImprovement": {
+        "title": "Performans İyileştirmesi",
+        "description": "Müşteri uygulamalarında ortalama performans artışı"
+      }
+    },
+    "additionalStats": {
+      "title": "Eğlenceli Gerçekler ve Metrikler",
+      "linesOfCode": "Yazılan Kod Satırları",
+      "coffeeCups": "Kahve Fincanları",
+      "githubCommits": "GitHub Commit'leri",
+      "bugsFixed": "Düzeltilen Hatalar"
+    },
+    "quote": {
+      "text": "Başarı sadece rakamlarla ilgili değil, yarattığımız etki ve çözdüğümüz problemlerle ilgili. Her kod satırı, her proje ve her memnun müşteri bu yolculukta ileri doğru atılan bir adımı temsil eder.",
+      "name": "Abdullah Alhasan",
+      "title": "Yazılım Mühendisi"
+    }
+    },
+    "testimonials": {
+    "client1": {
+      "quote": "Abdullah Alhasan'ın uzmanlığı ve yenilikçi yaklaşımı projemizi dönüştürdü. Teknik becerileri ve detaylara olan ilgisi benzersiz.",
+      "name": "Müşteri 1",
+      "title": "İş Sahibi"
+    },
+    "client2": {
+      "quote": "Abdullah ile çalışmak mutlak bir zevkti. Karmaşık problemleri çözme ve zamanında yüksek kaliteli çözümler sunma yeteneği etkileyiciydi.",
+      "name": "Müşteri 2",
+      "title": "Yazılım Geliştirici"
+    },
+    "client3": {
+      "quote": "Abdullah'ın mesleğine olan bağlılığı ve yazılım mühendisliğindeki derin anlayışı işbirliğimizi sorunsuz ve verimli kıldı.",
+      "name": "Müşteri 3",
+      "title": "Teknik Lider"
+    },
+    "client4": {
+      "quote": "İlk fikirden son uygulamaya kadar Abdullah, projeyi tamamen yeni bir seviyeye taşıyan paha biçilmez görüşler sağladı.",
+      "name": "Müşteri 4",
+      "title": "Proje Yöneticisi"
+    },
+    "client5": {
+      "quote": "Abdullah, beklentileri sürekli aşan yetenekli ve güvenilir bir mühendis. Herhangi bir yazılım geliştirme ihtiyacı için kendisini şiddetle tavsiye ederim.",
+      "name": "Müşteri 5",
+      "title": "Startup Kurucusu"
+    }
+    },
+    "skills": {
+  "title": "Becerilerim ve Uzmanlığım",
+  "categories": {
+    "frontend": {
+      "title": "Frontend",
+      "description": "Duyarlı ve etkileşimli kullanıcı arayüzleri oluşturma"
+    },
+    "backend": {
+      "title": "Backend",
+      "description": "Sağlam sunucu tarafı uygulamaları geliştirme"
+    },
+    "database": {
+      "title": "Veritabanı", 
+      "description": "Veri depolama yönetimi ve optimizasyonu"
+    },
+    "tools": {
+      "title": "Araçlar ve Yöntemler",
+      "description": "Modern araçlar ve metodolojiler kullanma"
+    },
+    "other": {
+      "title": "Diğer",
+      "description": "Ek beceriler ve yetkinlikler"
+    }
+  },
+  "skillNames": {
+    "react": "React",
+    "typescript": "TypeScript",
+    "nextjs": "Next.js",
+    "tailwind": "Tailwind CSS", 
+    "javascript": "JavaScript",
+    "htmlcss": "HTML/CSS",
+    "nodejs": "Node.js",
+    "express": "Express",
+    "python": "Python",
+    "django": "Django",
+    "laravel": "Laravel",
+    "nestjs": "Nest.js",
+    "mongodb": "MongoDB",
+    "postgresql": "PostgreSQL",
+    "mysql": "MySQL",
+    "nosql": "NoSQL",
+    "firebase": "Firebase",
+    "git": "Git",
+    "jira": "Jira",
+    "figma": "Figma",
+    "notion": "Notion",
+    "testing": "Test",
+    "restfulapis": "RESTful APIs",
+    "problemsolving": "Problem Çözme",
+    "communication": "İletişim",
+    "teamleadership": "Takım Liderliği", 
+    "projectmanagement": "Proje Yönetimi",
+    "uiuxdesign": "UI/UX Tasarım",
+    "performanceoptimization": "Performans Optimizasyonu",
+    "github": "GitHub"
+  }
+    },
+    "contact": {
+  "title": "Birlikte Çalışalım",
+  "description": "Aklınızda bir proje mi var? Bunu duymak isterim. Bana bir mesaj gönderin ve birlikte harika bir şey inşa etmeye başlayalım.",
+  "getInTouch": {
+    "title": "İletişime Geçin",
+    "description": "Yeni fırsatları, ilginç projeleri ve yaratıcı zorlukları tartışmaya her zaman açığım. İlk uygulamanızı oluşturmak isteyen bir startup veya sistemlerinizi modernize etmek isteyen köklü bir şirket olun, yardım etmek için buradayım."
+  },
+  "contactInfo": {
+    "email": "E-posta",
+    "phone": "Telefon",
+    "location": "Konum",
+    "responseTime": "Yanıt Süresi", 
+    "responseTimeValue": "24 saat içinde"
+  },
+  "whyWorkWithMe": {
+    "title": "Neden Benimle Çalışmalısınız?",
+    "stats": {
+      "projectsDelivered": "Teslim Edilen Projeler",
+      "clientSatisfaction": "Müşteri Memnuniyeti",
+      "yearsExperience": "Yıllık Deneyim",
+      "technologies": "Teknolojiler"
+    }
+  },
+  "form": {
+    "placeholders": {
+      "name": "Adınız *",
+      "email": "E-postanız *", 
+      "company": "Şirket (İsteğe bağlı)",
+      "subject": "Konu *",
+      "message": "Projenizi anlatın... *"
+    },
+    "projectType": {
+      "label": "Proje Türü",
+      "options": {
+        "web": "Web Geliştirme",
+        "mobile": "Mobil Uygulama",
+        "fullstack": "Full Stack",
+        "consultation": "Danışmanlık", 
+        "other": "Diğer"
+      }
+    },
+    "buttons": {
+      "send": "Mesaj Gönder",
+      "sending": "Gönderiliyor..."
+    },
+    "successMessage": "Mesajınız için teşekkürler! Yakında size geri döneceğim."
+  }
+    }  
+}

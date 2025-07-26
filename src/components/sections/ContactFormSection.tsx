@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { useState } from "react"
+import { useTranslation } from "react-i18next"
 import { 
   Mail, 
   Phone, 
@@ -14,6 +15,7 @@ import {
 } from "lucide-react"
 
 export default function ContactFormSection() {
+  const { t } = useTranslation()
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -44,7 +46,7 @@ export default function ContactFormSection() {
     setIsSubmitting(false)
     
     // You would typically handle the actual form submission here
-    alert("Thank you for your message! I'll get back to you soon.")
+    alert(t('contact.form.successMessage'))
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -57,28 +59,43 @@ export default function ContactFormSection() {
   const contactInfo = [
     {
       icon: <Mail className="h-6 w-6" />,
-      title: "Email",
+      title: t('contact.contactInfo.email'),
       content: "abdallahalhasan2@gmail.com",
       color: "from-blue-500 to-cyan-500"
     },
     {
       icon: <Phone className="h-6 w-6" />,
-      title: "Phone",
+      title: t('contact.contactInfo.phone'),
       content: "+90 538 937 08 63",
       color: "from-green-500 to-emerald-500"
     },
     {
       icon: <MapPin className="h-6 w-6" />,
-      title: "Location",
+      title: t('contact.contactInfo.location'),
       content: "Istanbul, Turkey",
       color: "from-purple-500 to-violet-500"
     },
     {
       icon: <Clock className="h-6 w-6" />,
-      title: "Response Time",
-      content: "Within 24 hours",
+      title: t('contact.contactInfo.responseTime'),
+      content: t('contact.contactInfo.responseTimeValue'),
       color: "from-orange-500 to-red-500"
     }
+  ]
+
+  const projectTypeOptions = [
+    { value: "web", label: t('contact.form.projectType.options.web') },
+    { value: "mobile", label: t('contact.form.projectType.options.mobile') },
+    { value: "fullstack", label: t('contact.form.projectType.options.fullstack') },
+    { value: "consultation", label: t('contact.form.projectType.options.consultation') },
+    { value: "other", label: t('contact.form.projectType.options.other') }
+  ]
+
+  const quickStats = [
+    { label: t('contact.whyWorkWithMe.stats.projectsDelivered'), value: "30+" },
+    { label: t('contact.whyWorkWithMe.stats.clientSatisfaction'), value: "98%" },
+    { label: t('contact.whyWorkWithMe.stats.yearsExperience'), value: "3+" },
+    { label: t('contact.whyWorkWithMe.stats.technologies'), value: "50+" }
   ]
 
   return (
@@ -105,11 +122,11 @@ export default function ContactFormSection() {
 
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight text-white">
-            Let's Work Together
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight text-black dark:text-white">
+            {t('contact.title')}
           </h2>
           <p className="max-w-2xl mx-auto text-lg">
-            Have a project in mind? I'd love to hear about it. Send me a message and let's start building something amazing together.
+            {t('contact.description')}
           </p>
         </div>
 
@@ -123,10 +140,11 @@ export default function ContactFormSection() {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">
+                {t('contact.getInTouch.title')}
+              </h3>
               <p className=" mb-8">
-                I'm always open to discussing new opportunities, interesting projects, and creative challenges. 
-                Whether you're a startup looking to build your first app or an established company seeking to modernize your systems, I'm here to help.
+                {t('contact.getInTouch.description')}
               </p>
             </div>
 
@@ -158,14 +176,11 @@ export default function ContactFormSection() {
               transition={{ delay: 0.4 }}
               className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-xl p-6 border border-gray-700"
             >
-              <h4 className="text-lg font-semibold text-white mb-4">Why Work With Me?</h4>
+              <h4 className="text-lg font-semibold text-white mb-4">
+                {t('contact.whyWorkWithMe.title')}
+              </h4>
               <div className="grid grid-cols-2 gap-4">
-                {[
-                  { label: "Projects Delivered", value: "30+" },
-                  { label: "Client Satisfaction", value: "98%" },
-                  { label: "Years Experience", value: "3+" },
-                  { label: "Technologies", value: "50+" }
-                ].map((stat, index) => (
+                {quickStats.map((stat, index) => (
                   <div key={index} className="text-center">
                     <div className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
                       {stat.value}
@@ -194,7 +209,7 @@ export default function ContactFormSection() {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="Your Name *"
+                    placeholder={t('contact.form.placeholders.name')}
                     required
                     className="w-full pl-12 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
                   />
@@ -207,7 +222,7 @@ export default function ContactFormSection() {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="Your Email *"
+                    placeholder={t('contact.form.placeholders.email')}
                     required
                     className="w-full pl-12 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
                   />
@@ -221,25 +236,27 @@ export default function ContactFormSection() {
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
-                  placeholder="Company (Optional)"
+                  placeholder={t('contact.form.placeholders.company')}
                   className="w-full pl-12 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-black dark:text-white mb-2">Project Type</label>
+                <label className="block text-sm font-medium text-black dark:text-white mb-2">
+                  {t('contact.form.projectType.label')}
+                </label>
                 <select
-                    title="2"
+                  title="Project Type"
                   name="projectType"
                   value={formData.projectType}
                   onChange={handleChange}
                   className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
                 >
-                  <option value="web">Web Development</option>
-                  <option value="mobile">Mobile App</option>
-                  <option value="fullstack">Full Stack</option>
-                  <option value="consultation">Consultation</option>
-                  <option value="other">Other</option>
+                  {projectTypeOptions.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
                 </select>
               </div>
 
@@ -250,7 +267,7 @@ export default function ContactFormSection() {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  placeholder="Subject *"
+                  placeholder={t('contact.form.placeholders.subject')}
                   required
                   className="w-full pl-12 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
                 />
@@ -261,7 +278,7 @@ export default function ContactFormSection() {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="Tell me about your project... *"
+                  placeholder={t('contact.form.placeholders.message')}
                   required
                   rows={5}
                   className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors resize-none"
@@ -282,12 +299,12 @@ export default function ContactFormSection() {
                 {isSubmitting ? (
                   <>
                     <div className="w-5 h-5 border-2 border-gray-400 border-t-transparent rounded-full animate-spin"></div>
-                    <span>Sending...</span>
+                    <span>{t('contact.form.buttons.sending')}</span>
                   </>
                 ) : (
                   <>
                     <Send className="h-5 w-5" />
-                    <span>Send Message</span>
+                    <span>{t('contact.form.buttons.send')}</span>
                   </>
                 )}
               </motion.button>

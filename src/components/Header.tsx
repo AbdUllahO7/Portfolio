@@ -4,30 +4,45 @@ import { motion, useScroll, useMotionValueEvent } from "framer-motion"
 import { useState, useEffect } from "react"
 import { Menu, X, Code, Mail } from "lucide-react"
 import { ThemeToggle } from "@/components/ThemeToggle"
+import { useLanguage } from "@/context/LanguageContext"
+import LanguageSelector from "./LanguageSelectorComponent"
+import { useTranslation } from "react-i18next"
+import { useMemo } from "react"
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [activeSection, setActiveSection] = useState("")
   const { scrollY } = useScroll()
+  const { language, setLanguage } = useLanguage()
+  const { t } = useTranslation()
+
+  // Language change handler
+  const handleLanguageChange = (languageCode: string) => {
+    setLanguage(languageCode as 'en' | 'ar' | 'tr')
+  }
 
   // Handle scroll events
   useMotionValueEvent(scrollY, "change", (latest) => {
     setIsScrolled(latest > -500)
   })
 
-  // Navigation items
-  const navItems = [
-    { name: "Home", href: "#home", id: "home" },
-    { name: "About", href: "#about", id: "about" },
-    { name: "Services", href: "#services", id: "services" },
-    { name: "Tech Stack", href: "#tech-stack", id: "tech-stack" },
-    { name: "Case Studies", href: "#case-studies", id: "case-studies" },
-    { name: "Projects", href: "#timeline", id: "timeline" },
-    { name: "Process", href: "#process", id: "process" },
-    { name: "Skills", href: "#skills", id: "skills" },
-    { name: "Contact", href: "#contact", id: "contact" },
-  ]
+  // Navigation items with translations
+
+  const navItems = useMemo(() => [
+    { name: t('header.navigation.home'), href: "#home", id: "home" },
+    { name: t('header.navigation.about'), href: "#about", id: "about" },
+    { name: t('header.navigation.services'), href: "#services", id: "services" },
+    { name: t('header.navigation.techStack'), href: "#tech-stack", id: "tech-stack" },
+    { name: t('header.navigation.caseStudies'), href: "#case-studies", id: "case-studies" },
+    { name: t('header.navigation.projects'), href: "#timeline", id: "timeline" },
+    { name: t('header.navigation.process'), href: "#process", id: "process" },
+    { name: t('header.navigation.skills'), href: "#skills", id: "skills" },
+    { name: t('header.navigation.contact'), href: "#contact", id: "contact" },
+  ], [t])
+
+  // Check if current language is RTL
+  const isRTL = language === 'ar'
 
   // Track active section
   useEffect(() => {
@@ -56,7 +71,7 @@ export default function Header() {
     })
 
     return () => observer.disconnect()
-  }, [])
+  }, [navItems])
 
   // Smooth scroll to section
   const scrollToSection = (href: string) => {
@@ -80,12 +95,13 @@ export default function Header() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
+      dir={isRTL ? 'rtl' : 'ltr'}
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className={`flex items-center justify-between h-16 lg:h-20 ${isRTL ? 'flex-row-reverse' : ''}`}>
           {/* Logo */}
           <motion.div
-            className="flex items-center space-x-2"
+            className={`flex items-center space-x-2 ${isRTL ? 'space-x-reverse' : ''}`}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -93,16 +109,20 @@ export default function Header() {
               <Code className="h-6 w-6 text-white" />
             </div>
             <div className="hidden sm:block">
-              <h1 className="text-xl font-bold text-black dark:text-white">Abdullah</h1>
-              <p className="text-xs text-gray-600 dark:text-gray-400 -mt-1">Software Engineer</p>
+              <h1 className="text-xl font-bold text-black dark:text-white">
+                {t('header.title')}
+              </h1>
+              <p className="text-xs text-gray-600 dark:text-gray-400 -mt-1">
+                {t('header.subtitle')}
+              </p>
             </div>
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-1">
+          <div className={`hidden lg:flex items-center space-x-1 ${isRTL ? 'space-x-reverse' : ''}`}>
             {navItems.map((item) => (
               <motion.button
-                key={item.name}
+                key={`${item.id}-${language}`}
                 onClick={() => scrollToSection(item.href)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 relative ${
                   activeSection === item.id
@@ -126,14 +146,18 @@ export default function Header() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className={`hidden lg:flex items-center space-x-4 ${isRTL ? 'space-x-reverse' : ''}`}>
             <ThemeToggle />
-            
+            <LanguageSelector
+              currentLanguage={language}
+              onLanguageChange={handleLanguageChange}
+            />
             <motion.a
               href="mailto:abdallahalhasan2@gmail.com"
               className="p-2 text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
+              title={t('header.cta.emailMe')}
             >
               <Mail className="h-5 w-5" />
             </motion.a>
@@ -144,12 +168,12 @@ export default function Header() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Let&apos;s Talk
+              {t('header.cta.letsTalk')}
             </motion.button>
           </div>
 
           {/* Mobile menu button and theme toggle */}
-          <div className="lg:hidden flex items-center space-x-3">
+          <div className={`lg:hidden flex items-center space-x-3 ${isRTL ? 'space-x-reverse' : ''}`}>
             <ThemeToggle />
             
             <motion.button
@@ -174,14 +198,14 @@ export default function Header() {
           <div className="py-4 space-y-2 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-lg mt-2 border border-gray-200 dark:border-gray-800">
             {navItems.map((item, index) => (
               <motion.button
-                key={item.name}
+                key={`mobile-${item.id}-${language}`}
                 onClick={() => scrollToSection(item.href)}
-                className={`block w-full text-left px-4 py-3 text-sm font-medium transition-all duration-300 ${
+                className={`block w-full text-${isRTL ? 'right' : 'left'} px-4 py-3 text-sm font-medium transition-all duration-300 ${
                   activeSection === item.id
-                    ? "text-black dark:text-white bg-gradient-to-r from-blue-500/20 to-purple-600/20 border-l-2 border-blue-500"
+                    ? `text-black dark:text-white bg-gradient-to-r from-blue-500/20 to-purple-600/20 border-${isRTL ? 'r' : 'l'}-2 border-blue-500`
                     : "text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800/50"
                 }`}
-                initial={{ opacity: 0, x: -20 }}
+                initial={{ opacity: 0, x: isRTL ? 20 : -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1 }}
                 whileTap={{ scale: 0.98 }}
@@ -194,11 +218,11 @@ export default function Header() {
             <div className="px-4 py-2 space-y-2">
               <motion.a
                 href="mailto:abdallahalhasan2@gmail.com"
-                className="flex items-center space-x-2 text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors py-2"
+                className={`flex items-center space-x-2 text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors py-2 ${isRTL ? 'space-x-reverse' : ''}`}
                 whileTap={{ scale: 0.98 }}
               >
                 <Mail className="h-4 w-4" />
-                <span className="text-sm">Email Me</span>
+                <span className="text-sm">{t('header.cta.emailMe')}</span>
               </motion.a>
               
               <motion.button
@@ -206,7 +230,7 @@ export default function Header() {
                 className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg font-medium text-sm"
                 whileTap={{ scale: 0.98 }}
               >
-                Let&apos;s Talk
+                {t('header.cta.letsTalk')}
               </motion.button>
             </div>
           </div>

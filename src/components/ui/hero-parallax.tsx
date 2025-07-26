@@ -9,6 +9,8 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from "@/context/LanguageContext";
 
 export const HeroParallax = ({
   products,
@@ -54,10 +56,11 @@ export const HeroParallax = ({
     useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
     springConfig
   );
+
   return (
     <div
       ref={ref}
-      className="h-[300vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[300vh]  py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -78,7 +81,7 @@ export const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row  mb-20 space-x-20">
+        <motion.div className="flex flex-row mb-20 space-x-20">
           {secondRow.map((product) => (
             <ProductCard
               product={product}
@@ -102,12 +105,59 @@ export const HeroParallax = ({
 };
 
 export const Header = () => {
-  return (
-    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
-      <h1 className="text-2xl md:text-7xl font-bold dark:text-white text-black">
-        Hi , I'm Abdullah ALHASAN<br /> SoftWare Engineering
-      </h1>
+  const { t } = useTranslation();
+  const { language } = useLanguage();
+  
+  // Fix RTL logic - typically Arabic, Hebrew, etc. are RTL, not English
+  const isRTL = language === 'ar' 
+  const direction = isRTL ? 'rtl' : 'ltr';
 
+  return (
+    <div 
+      className={`max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0 ${
+        isRTL ? 'text-right' : 'text-left'
+      }`}
+      dir={direction}
+    >
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      >
+        <h1 className={`text-2xl md:text-7xl font-bold dark:text-white text-black leading-tight ${
+          isRTL ? 'font-arabic' : ''
+        }`}>
+          <span className="block mb-2 md:mb-4">
+            {t('hero.greeting')} 
+          </span>
+          <span className="block bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+            {t('hero.name')}
+          </span>
+          <span className="block text-xl md:text-4xl mt-4 text-gray-600 dark:text-gray-300 font-medium">
+            {t('hero.title')}
+          </span>
+        </h1>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.6 }}
+        className="mt-8 md:mt-12"
+      >
+        <p className={`text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl ${
+          isRTL ? 'font-arabic' : ''
+        }`}>
+          {t('hero.subtitle')}
+        </p>
+        <p className={`text-base md:text-lg text-gray-500 dark:text-gray-400 max-w-3xl mt-4 ${
+          isRTL ? 'font-arabic' : ''
+        }`}>
+          {t('hero.description')}
+        </p>
+      </motion.div>
+
+   
     </div>
   );
 };

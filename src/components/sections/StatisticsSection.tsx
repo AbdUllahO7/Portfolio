@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef, useEffect, useState } from "react"
+import { useTranslation } from "react-i18next"
 import { 
   Trophy, 
   Target, 
@@ -17,6 +18,7 @@ import {
 } from "lucide-react"
 
 export default function StatisticsSection() {
+  const { t } = useTranslation()
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
 
@@ -25,32 +27,32 @@ export default function StatisticsSection() {
       icon: <Briefcase className="h-8 w-8" />,
       number: 100,
       suffix: "+",
-      label: "Projects Completed",
-      description: "Successfully delivered projects across various industries",
+      label: t('statistics.mainStats.projectsCompleted.label'),
+      description: t('statistics.mainStats.projectsCompleted.description'),
       color: "from-blue-500 to-cyan-500"
     },
     {
       icon: <Users className="h-8 w-8" />,
       number: 50,
       suffix: "+",
-      label: "Happy Clients",
-      description: "Satisfied clients who trust my expertise",
+      label: t('statistics.mainStats.happyClients.label'),
+      description: t('statistics.mainStats.happyClients.description'),
       color: "from-green-500 to-emerald-500"
     },
     {
       icon: <Clock className="h-8 w-8" />,
       number: 5,
       suffix: "+",
-      label: "Years Experience",
-      description: "Building software solutions and growing expertise",
+      label: t('statistics.mainStats.yearsExperience.label'),
+      description: t('statistics.mainStats.yearsExperience.description'),
       color: "from-purple-500 to-violet-500"
     },
     {
       icon: <Code2 className="h-8 w-8" />,
       number: 50,
       suffix: "+",
-      label: "Technologies",
-      description: "Mastered across frontend, backend, and mobile",
+      label: t('statistics.mainStats.technologies.label'),
+      description: t('statistics.mainStats.technologies.description'),
       color: "from-orange-500 to-red-500"
     }
   ]
@@ -58,39 +60,39 @@ export default function StatisticsSection() {
   const achievements = [
     {
       icon: <Award className="h-6 w-6" />,
-      title: "Full Stack Expertise",
-      description: "Proficient in end-to-end application development",
+      title: t('statistics.achievements.fullStackExpertise.title'),
+      description: t('statistics.achievements.fullStackExpertise.description'),
       metric: "100%",
       color: "from-yellow-500 to-orange-500"
     },
     {
       icon: <Star className="h-6 w-6" />,
-      title: "Client Satisfaction",
-      description: "Average client satisfaction rating",
+      title: t('statistics.achievements.clientSatisfaction.title'),
+      description: t('statistics.achievements.clientSatisfaction.description'),
       metric: "98%",
       color: "from-pink-500 to-rose-500"
     },
     {
       icon: <Zap className="h-6 w-6" />,
-      title: "On-Time Delivery",
-      description: "Projects delivered within agreed timeframes",
+      title: t('statistics.achievements.onTimeDelivery.title'),
+      description: t('statistics.achievements.onTimeDelivery.description'),
       metric: "95%",
       color: "from-blue-500 to-cyan-500"
     },
     {
       icon: <TrendingUp className="h-6 w-6" />,
-      title: "Performance Improvement",
-      description: "Average performance boost in client applications",
+      title: t('statistics.achievements.performanceImprovement.title'),
+      description: t('statistics.achievements.performanceImprovement.description'),
       metric: "40%",
       color: "from-green-500 to-emerald-500"
     }
   ]
 
   const additionalStats = [
-    { label: "Lines of Code Written", value: "500K+", icon: <Code2 className="h-5 w-5" /> },
-    { label: "Coffee Cups", value: "2000+", icon: <Coffee className="h-5 w-5" /> },
-    { label: "GitHub Commits", value: "3000+", icon: <Target className="h-5 w-5" /> },
-    { label: "Bugs Fixed", value: "1000+", icon: <Trophy className="h-5 w-5" /> },
+    { label: t('statistics.additionalStats.linesOfCode'), value: "500K+", icon: <Code2 className="h-5 w-5" /> },
+    { label: t('statistics.additionalStats.coffeeCups'), value: "2000+", icon: <Coffee className="h-5 w-5" /> },
+    { label: t('statistics.additionalStats.githubCommits'), value: "3000+", icon: <Target className="h-5 w-5" /> },
+    { label: t('statistics.additionalStats.bugsFixed'), value: "1000+", icon: <Trophy className="h-5 w-5" /> },
   ]
 
   return (
@@ -118,11 +120,10 @@ export default function StatisticsSection() {
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight ">
-            By the Numbers
+            {t('statistics.title')}
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            Here's a snapshot of my journey and achievements in software engineering. 
-            Numbers tell a story of dedication, growth, and success.
+            {t('statistics.description')}
           </p>
         </div>
 
@@ -176,7 +177,9 @@ export default function StatisticsSection() {
           viewport={{ once: true }}
           className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 border border-gray-700"
         >
-          <h3 className="text-2xl font-bold  mb-8 text-center text-white">Fun Facts & Metrics</h3>
+          <h3 className="text-2xl font-bold  mb-8 text-center text-white">
+            {t('statistics.additionalStats.title')}
+          </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {additionalStats.map((stat, index) => (
               <motion.div
@@ -206,16 +209,15 @@ export default function StatisticsSection() {
           className="text-center mt-16 max-w-4xl mx-auto"
         >
           <blockquote className="text-xl md:text-2xl italic mb-6">
-            "Success is not just about the numbers, but about the impact we create and the problems we solve. 
-            Every line of code, every project, and every satisfied client represents a step forward in this journey."
+            "{t('statistics.quote.text')}"
           </blockquote>
           <div className="flex items-center justify-center space-x-4">
             <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center font-bold">
               A
             </div>
             <div>
-              <div className="font-semibold">Abdullah Alhasan</div>
-              <div className="text-sm">Software Engineer</div>
+              <div className="font-semibold">{t('statistics.quote.name')}</div>
+              <div className="text-sm">{t('statistics.quote.title')}</div>
             </div>
           </div>
         </motion.div>

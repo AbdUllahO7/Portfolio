@@ -1,29 +1,33 @@
+// app/page.tsx
+'use client'
 import { FeaturesSectionDemo } from "@/components/FeaturesSectionDemo";
 import { BackgroundLines } from "@/components/ui/background-lines";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 import { HeroParallax } from "@/components/ui/hero-parallax";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { TimelineSection } from "@/components/ui/timeline";
-import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import SkillsSection from "@/components/skills-section";
 
 import { product } from "@/constants/heroParallaxData";
-import { items } from "@/constants/hoverEffectData";
-import { testimonials } from "@/constants/testimonialsData";
+import { getItems } from "@/constants/hoverEffectData";
+import { getTestimonials } from "@/constants/testimonialsData";
 
 import ServicesSection from "@/components/sections/ServicesSection";
 import TechStackSection from "@/components/sections/TechStackSection";
 import CaseStudiesSection from "@/components/sections/CaseStudiesSection";
-import { timelineData } from "@/constants/timelineData";
 import ProcessSection from "@/components/sections/ProcessSection";
 import StatisticsSection from "@/components/sections/StatisticsSection";
 import ContactFormSection from "@/components/sections/ContactFormSection";
 import { links } from "@/constants/links";
-import { words } from "@/constants/words";
 import Header from "@/components/Header";
 
+import { useTranslation } from "react-i18next";
+
 export default function Home() {
+  const { t , i18n } = useTranslation();
+  const items = getItems(t);
+  const testimonials = getTestimonials(t)
   return (
     <main className="w-full min-h-screen bg-white dark:bg-black transition-colors duration-300">
       <Header />
@@ -36,12 +40,6 @@ export default function Home() {
           </section>
 
           <div className="container mx-auto">
-            {/* Typewriter Effect */}
-            <TypewriterEffect 
-              words={words} 
-              className="text-black dark:text-white"
-            />
-
             {/* About Section */}
             <section id="about" className="relative">
               <HoverEffect 
@@ -51,38 +49,38 @@ export default function Home() {
             </section>
 
             {/* Services Section (Original) */}
-            <section className="mt-[80px] relative" id="services">
-              <FeaturesSectionDemo/>
-            </section>
+           <section className="mt-[80px] relative" id="services">
+            <FeaturesSectionDemo key={i18n.language} />
+          </section>
 
             {/* Additional Services Section */}
             <section id="services-detailed" className="relative">
-              <ServicesSection/>
+              <ServicesSection key={i18n.language}/>
             </section>
 
             {/* Technology Stack Section */}
             <section id="tech-stack" className="relative">
-              <TechStackSection/>
+              <TechStackSection key={i18n.language}/>
             </section>
 
             {/* Case Studies Section */}
             <section id="case-studies" className="relative">
-              <CaseStudiesSection/>
+              <CaseStudiesSection key={i18n.language}/>
             </section>
 
             {/* Timeline Section */}
             <section id="timeline">
-              <TimelineSection timelineData={timelineData} />
+              <TimelineSection  key={i18n.language}/>
             </section>
 
             {/* Work Process Section */}
             <section id="process" className="relative">
-              <ProcessSection/>
+              <ProcessSection key={i18n.language}/>
             </section>
 
             {/* Statistics Section */}
             <section id="statistics" className="relative">
-              <StatisticsSection/>
+              <StatisticsSection />
             </section>
 
             {/* Testimonials Section */}
@@ -91,6 +89,7 @@ export default function Home() {
                 items={testimonials}
                 direction="left"
                 speed="fast"
+                key={i18n.language}
               />
             </section>
 
