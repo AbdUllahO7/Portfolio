@@ -28,7 +28,6 @@ export default function Header() {
   })
 
   // Navigation items with translations
-
   const navItems = useMemo(() => [
     { name: t('header.navigation.home'), href: "#home", id: "home" },
     { name: t('header.navigation.about'), href: "#about", id: "about" },
@@ -172,10 +171,13 @@ export default function Header() {
             </motion.button>
           </div>
 
-          {/* Mobile menu button and theme toggle */}
+          {/* Mobile menu button, theme toggle, and language selector */}
           <div className={`lg:hidden flex items-center space-x-3 ${isRTL ? 'space-x-reverse' : ''}`}>
             <ThemeToggle />
-            
+            <LanguageSelector
+              currentLanguage={language}
+              onLanguageChange={handleLanguageChange}
+            />
             <motion.button
               className="p-2 text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white"
               onClick={() => setIsOpen(!isOpen)}
