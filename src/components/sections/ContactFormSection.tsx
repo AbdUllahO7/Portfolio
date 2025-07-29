@@ -92,10 +92,10 @@ export default function ContactFormSection() {
   ]
 
   const quickStats = [
-    { label: t('contact.whyWorkWithMe.stats.projectsDelivered'), value: "30+" },
+    { label: t('contact.whyWorkWithMe.stats.projectsDelivered'), value: "20+" },
     { label: t('contact.whyWorkWithMe.stats.clientSatisfaction'), value: "98%" },
     { label: t('contact.whyWorkWithMe.stats.yearsExperience'), value: "3+" },
-    { label: t('contact.whyWorkWithMe.stats.technologies'), value: "50+" }
+    { label: t('contact.whyWorkWithMe.stats.technologies'), value: "30+" }
   ]
 
   return (

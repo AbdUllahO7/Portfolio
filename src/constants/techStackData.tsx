@@ -72,8 +72,8 @@ export const getTechStack = (t: TFunction) => ({
 });
 
 export const getStats = (t: TFunction) => [
-  { number: "50+", label: t('techStack.stats.technologiesMastered') },
-  { number: "100+", label: t('techStack.stats.projectsCompleted') },
-  { number: "5+", label: t('techStack.stats.yearsExperience') },
-  { number: "50+", label: t('techStack.stats.happyClients') },
+  { number: "30+", label: t('techStack.stats.technologiesMastered') },
+  { number: "20+", label: t('techStack.stats.projectsCompleted') },
+  { number: "3+", label: t('techStack.stats.yearsExperience') },
+  { number: "20+", label: t('techStack.stats.happyClients') },
 ];
