@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
+import emailjs from '@emailjs/browser'
 import { 
   Mail, 
   Phone, 
@@ -26,27 +27,55 @@ export default function ContactFormSection() {
   })
 
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setSubmitStatus('idle')
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      company: "",
-      subject: "",
-      message: "",
-      projectType: "web"
-    })
-    setIsSubmitting(false)
-    
-    // You would typically handle the actual form submission here
-    alert(t('contact.form.successMessage'))
+    try {
+      // EmailJS configuration
+      const serviceId = 'service_rxiv2xp' // Replace with your EmailJS service ID
+      const templateId = 'template_ojbh4e4' // Replace with your EmailJS template ID
+      const publicKey = 'vdCt1pWIL72qWQ-6t' // Replace with your EmailJS public key
+
+      // Template parameters
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        company: formData.company,
+        subject: formData.subject,
+        message: formData.message,
+        project_type: formData.projectType,
+        to_email: 'abdallahalhasan2@gmail.com'
+      }
+
+      // Send email using EmailJS
+      await emailjs.send(
+        serviceId,
+        templateId,
+        templateParams,
+        publicKey
+      )
+
+      // Success
+      setSubmitStatus('success')
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        subject: "",
+        message: "",
+        projectType: "web"
+      })
+      
+    } catch (error) {
+      console.error('Email sending failed:', error)
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -200,6 +229,27 @@ export default function ContactFormSection() {
             transition={{ duration: 0.5 }}
             className="backdrop-blur-sm border border-gray-800 rounded-2xl p-8"
           >
+            {/* Status Messages */}
+            {submitStatus === 'success' && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg text-green-400"
+              >
+                ✅ Message sent successfully! I'll get back to you soon.
+              </motion.div>
+            )}
+            
+            {submitStatus === 'error' && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg text-red-400"
+              >
+                ❌ Failed to send message. Please try again or contact me directly.
+              </motion.div>
+            )}
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="relative">
