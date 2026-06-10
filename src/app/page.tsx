@@ -15,6 +15,7 @@ import { getTestimonials } from "@/constants/testimonialsData";
 
 import ServicesSection from "@/components/sections/ServicesSection";
 import TechStackSection from "@/components/sections/TechStackSection";
+import ExperienceSection from "@/components/sections/ExperienceSection";
 import CaseStudiesSection from "@/components/sections/CaseStudiesSection";
 import ProcessSection from "@/components/sections/ProcessSection";
 import StatisticsSection from "@/components/sections/StatisticsSection";
@@ -61,6 +62,11 @@ export default function Home() {
             {/* Technology Stack Section */}
             <section id="tech-stack" className="relative">
               <TechStackSection key={i18n.language}/>
+            </section>
+
+            {/* Work Experience Section */}
+            <section id="experience" className="relative">
+              <ExperienceSection key={i18n.language}/>
             </section>
 
             {/* Case Studies Section */}

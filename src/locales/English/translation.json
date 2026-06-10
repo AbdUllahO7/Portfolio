@@ -8,6 +8,7 @@
         "about": "About",
         "services": "Services",
         "techStack": "Tech Stack",
+        "experience": "Experience",
         "caseStudies": "Case Studies",
         "projects": "Projects",
         "process": "Process",
@@ -282,6 +283,52 @@
         "description1": "Built and launched Aceternity UI and Aceternity UI Pro from scratch, Full Stack Project"
       }
     }
+    },
+    "experience": {
+      "sectionTitle": "Work Experience",
+      "sectionDescription": "My professional journey and corporate work experience building production systems.",
+      "roles": {
+        "zimam": {
+          "role": "Full Stack Engineer",
+          "company": "Zimam Company (Saudi Arabia)",
+          "type": "Remote",
+          "duration": "January 2026 - Present",
+          "bullets": [
+            "Design and develop full-stack web applications using modern JavaScript frameworks and backend technologies",
+            "Build and maintain scalable RESTful APIs and integrate third-party services to support business requirements",
+            "Implement responsive and accessible frontend interfaces using React and TypeScript",
+            "Collaborate with cross-functional teams to deliver high-quality software solutions on schedule",
+            "Participate in code reviews and contribute to technical documentation and best practices"
+          ]
+        },
+        "idigitek": {
+          "role": "Software Engineer",
+          "company": "Idigitek Company (Turkey)",
+          "type": "On Site",
+          "duration": "January 2025 - 2026",
+          "bullets": [
+            "Develop and maintain full-stack web applications using modern JavaScript frameworks and backend technologies",
+            "Collaborate with cross-functional teams to design, develop, and deploy scalable software solutions",
+            "Implement responsive frontend interfaces and robust backend APIs to support business requirements",
+            "Participate in code reviews, testing, and debugging to ensure high-quality software delivery",
+            "Work with databases, server infrastructure, and cloud services to optimize application performance",
+            "Contribute to technical documentation and knowledge sharing within the development team"
+          ]
+        },
+        "freelance": {
+          "role": "Full Stack App Developer",
+          "company": "Freelance",
+          "type": "Remote",
+          "duration": "January 2023 - 2025",
+          "bullets": [
+            "Develop cross-platform mobile applications using React Native and Flutter",
+            "Build scalable and performant web applications from UI design to backend services",
+            "Integrate APIs, manage databases, and deploy applications across iOS and Android platforms",
+            "Collaborate in fast-paced environments using agile methodologies and version control",
+            "Deliver high-quality solutions that meet client requirements and deadlines"
+          ]
+        }
+      }
     },
     "process": {
     "sectionTitle": "My Work Process",

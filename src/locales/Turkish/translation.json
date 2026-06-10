@@ -8,6 +8,7 @@
         "about": "Hakkında",
         "services": "Hizmetler",
         "techStack": "Teknoloji Yığını",
+        "experience": "Deneyim",
         "caseStudies": "Vaka Çalışmaları",
         "projects": "Projeler",
         "process": "Süreç",
@@ -543,6 +544,52 @@
       "sending": "Gönderiliyor..."
     },
     "successMessage": "Mesajınız için teşekkürler! Yakında size geri döneceğim."
+    }
+  },
+  "experience": {
+    "sectionTitle": "İş Deneyimi",
+    "sectionDescription": "Üretim sistemleri oluşturma konusundaki profesyonel yolculuğum ve kurumsal iş deneyimim.",
+    "roles": {
+      "zimam": {
+        "role": "Full Stack Mühendisi",
+        "company": "Zimam Company (Suudi Arabistan)",
+        "type": "Uzaktan (Remote)",
+        "duration": "Ocak 2026 - Günümüz",
+        "bullets": [
+          "Modern JavaScript çerçeveleri ve arka uç teknolojilerini kullanarak tam yığın (full-stack) web uygulamaları tasarlamak ve geliştirmek",
+          "İş gereksinimlerini desteklemek için ölçeklenebilir RESTful API'ler oluşturmak, bakımını yapmak ve üçüncü taraf hizmetleri entegre etmek",
+          "React ve TypeScript kullanarak duyarlı (responsive) ve erişilebilir ön uç arayüzleri uygulamak",
+          "Yüksek kaliteli yazılım çözümlerini zamanında teslim etmek için çapraz işlevli ekiplerle iş birliği yapmak",
+          "Kod incelemelerine katılmak, teknik belgelere ve en iyi uygulamalara katkıda bulunmak"
+        ]
+      },
+      "idigitek": {
+        "role": "Yazılım Mühendisi",
+        "company": "Idigitek Company (Türkiye)",
+        "type": "Yerinde (On Site)",
+        "duration": "Ocak 2025 - 2026",
+        "bullets": [
+          "Modern JavaScript çerçeveleri ve arka uç teknolojilerini kullanarak tam yığın web uygulamaları geliştirmek ve sürdürmek",
+          "Ölçeklenebilir yazılım çözümleri tasarlamak, geliştirmek ve dağıtmak için çapraz işlevli ekiplerle iş birliği yapmak",
+          "İş gereksinimlerini desteklemek için duyarlı ön uç arayüzleri ve sağlam arka uç API'leri uygulamak",
+          "Yüksek kaliteli yazılım teslimatı sağlamak için kod incelemelerine, testlere ve hata ayıklamaya katılmak",
+          "Uygulama performansını optimize etmek için veri tabanları, sunucu altyapısı ve bulut hizmetleriyle çalışmak",
+          "Geliştirme ekibi içinde teknik belgelendirmeye ve bilgi paylaşımına katkıda bulunmak"
+        ]
+      },
+      "freelance": {
+        "role": "Full Stack Uygulama Geliştirici",
+        "company": "Serbest Çalışan (Freelance)",
+        "type": "Uzaktan",
+        "duration": "Ocak 2023 - 2025",
+        "bullets": [
+          "React Native ve Flutter kullanarak platformlar arası mobil uygulamalar geliştirmek",
+          "Kullanıcı arayüzü tasarımından arka uç hizmetlerine kadar ölçeklenebilir ve performanslı web uygulamaları oluşturmak",
+          "API'leri entegre etmek, veri tabanlarını yönetmek ve uygulamaları iOS ve Android platformlarında yayına almak",
+          "Çevik (Agile) metodolojileri ve sürüm kontrolünü kullanarak hızlı tempolu ortamlarda iş birliği yapmak",
+          "Müşteri gereksinimlerini ve teslim tarihlerini karşılayan yüksek kaliteli çözümler sunmak"
+        ]
+      }
+    }
   }
-    }  
 }

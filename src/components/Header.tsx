@@ -33,6 +33,7 @@ export default function Header() {
     { name: t('header.navigation.about'), href: "#about", id: "about" },
     { name: t('header.navigation.services'), href: "#services", id: "services" },
     { name: t('header.navigation.techStack'), href: "#tech-stack", id: "tech-stack" },
+    { name: t('header.navigation.experience'), href: "#experience", id: "experience" },
     { name: t('header.navigation.caseStudies'), href: "#case-studies", id: "case-studies" },
     { name: t('header.navigation.projects'), href: "#timeline", id: "timeline" },
     { name: t('header.navigation.process'), href: "#process", id: "process" },
