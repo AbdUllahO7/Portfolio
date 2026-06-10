@@ -149,9 +149,35 @@
       "technologiesUsed": "Kullanılan Teknolojiler",
       "keyFeatures": "Temel Özellikler",
       "resultsAchieved": "Elde Edilen Sonuçlar",
-      "viewLiveProject": "Canlı Projeyi Görüntüle"
+      "viewLiveProject": "Canlı Projeyi Görüntüle",
+      "viewAppStore": "App Store",
+      "viewPlayStore": "Google Play"
     },
     "projects": {
+      "bishola": {
+        "title": "Bishola - Araç Paylaşım Ekosistemi",
+        "subtitle": "Kapsamlı araç kiralama ve satış platformu",
+        "category": "Araç Paylaşımı / E-Ticaret",
+        "duration": "6 ay",
+        "team": "Kurucu / Lider Geliştirici",
+        "problem": "Araç sahiplerinin araçlarını kiralayarak gelir elde edebileceği veya satışa çıkarabileceği güvenli ve birleşik bir platform yoktu; kiralayanlar/alıcılar ise gerçek zamanlı bir araç arama aracına erişemiyordu.",
+        "solution": "NestJS API arka ucu, Next.js web portalı ve gerçek zamanlı bildirimler, JWT tabanlı rol erişimi ve gelişmiş konum filtreleme özelliklerine sahip React Native mobil uygulamalarından oluşan çapraz platform bir araç paylaşım ekosistemi geliştirildi.",
+        "results": [
+          "Web, iOS ve Android uygulamaları başarıyla yayına alındı",
+          "Araç sahipleri için kesintisiz listeleme, kiralama ve satış iş akışları sağlandı",
+          "Gerçek zamanlı bildirimler ve güvenli ödeme sistemleri entegre edildi",
+          "Hızlı konum tabanlı araç aramaları için veri sorgulama optimize edildi"
+        ],
+        "features": [
+          "Kiralama ve satış için araç listeleme yönetimi",
+          "PostgreSQL veritabanı ile sağlam NestJS arka uç API'si",
+          "JWT Kimlik Doğrulama ve rol tabanlı izinler",
+          "SEO için SSR özellikli Next.js web uygulaması",
+          "Doğal performanslı React Native iOS/Android uygulamaları",
+          "Gelişmiş coğrafi konum arama ve filtreleme",
+          "Moderasyon ve analitik için yönetici paneli"
+        ]
+      },
       "layandent": {
         "title": "LayandDent - Diş Hekimliği E-Ticaret Platformu",
         "subtitle": "Suudi Arabistan'ın önde gelen diş malzemeleri şirketi",
@@ -256,6 +282,10 @@
     "sectionDescription": "Profesyonel yolculuğum boyunca çalıştığım kariyar zaman çizelgemi ve temel projeleri keşfedin. Her proje, yazılım mühendisi olarak büyümemde bir dönüm noktasını temsil ediyor.",
     "visitButton": "Ziyaret Et",
     "projects": {
+      "bishola2025": {
+        "description1": "Bishola Platformu - Araç sahiplerinin araçlarını diğer kullanıcılara kiralama veya satış için listelemelerini sağlayan kapsamlı bir araç paylaşım ekosistemi.",
+        "description2": "NestJS, Next.js, PostgreSQL ve React Native kullanılarak, JWT kimlik doğrulaması, gerçek zamanlı bildirimler ve gelişmiş filtreleme ile geliştirildi."
+      },
       "layandent2025": {
         "description1": "LayandDent, diş malzemeleri ve ekipmanlarında önde gelen Suudi şirketi, doktorlarımızın ilk tercihi olmaya çalışıyoruz.",
         "description2": ""

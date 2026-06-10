@@ -5,6 +5,24 @@ import { TFunction } from "i18next";
 export const getCaseStudies = (t: TFunction) => [
   {
     id: 1,
+    title: t('caseStudies.projects.bishola.title'),
+    subtitle: t('caseStudies.projects.bishola.subtitle'),
+    image: "/assets/images/bishola.png",
+    category: t('caseStudies.projects.bishola.category'),
+    duration: t('caseStudies.projects.bishola.duration'),
+    team: t('caseStudies.projects.bishola.team'),
+    technologies: ["NestJS", "Next.js", "PostgreSQL", "React Native", "JWT", "Tailwind CSS"],
+    problem: t('caseStudies.projects.bishola.problem'),
+    solution: t('caseStudies.projects.bishola.solution'),
+    results: t('caseStudies.projects.bishola.results', { returnObjects: true }) as string[],
+    features: t('caseStudies.projects.bishola.features', { returnObjects: true }) as string[],
+    link: "https://bishola.com/en",
+    androidLink: "https://play.google.com/store/search?q=bishola&c=apps",
+    iosLink: "https://apps.apple.com/us/app/bishola/id6751427088",
+    color: "from-indigo-600 to-purple-600"
+  },
+  {
+    id: 2,
     title: t('caseStudies.projects.layandent.title'),
     subtitle: t('caseStudies.projects.layandent.subtitle'),
     image: "/assets/images/Layan/Layan-1.png",
@@ -20,7 +38,7 @@ export const getCaseStudies = (t: TFunction) => [
     color: "from-blue-500 to-cyan-500"
   },
   {
-    id: 2,
+    id: 3,
     title: t('caseStudies.projects.amwall.title'),
     subtitle: t('caseStudies.projects.amwall.subtitle'),
     image: "/assets/images/Amwall/Amwall-1.png",
@@ -36,7 +54,7 @@ export const getCaseStudies = (t: TFunction) => [
     color: "from-blue-500 to-cyan-500"
   },
   {
-    id: 3,
+    id: 4,
     title: t('caseStudies.projects.storeIt.title'),
     subtitle: t('caseStudies.projects.storeIt.subtitle'),
     image: "/assets/images/storeIt.png",
@@ -52,7 +70,7 @@ export const getCaseStudies = (t: TFunction) => [
     color: "from-blue-500 to-cyan-500"
   },
   {
-    id: 4,
+    id: 5,
     title: t('caseStudies.projects.liveDoc.title'),
     subtitle: t('caseStudies.projects.liveDoc.subtitle'),
     image: "/assets/images/LiveDoc/live-doc-1.png",

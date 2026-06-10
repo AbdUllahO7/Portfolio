@@ -51,7 +51,7 @@ export default function ExperienceSection() {
   }
 
   return (
-    <section id="experience" className="py-20 px-4 md:px-6 relative overflow-hidden bg-white dark:bg-black transition-colors duration-300">
+    <section id="experience" className="py-20 px-4 md:px-6 relative overflow-hidden transition-colors duration-300">
       {/* Premium Background Gradients */}
       <div className="absolute top-1/4 start-1/4 w-96 h-96 bg-blue-500/10 dark:bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 end-1/4 w-96 h-96 bg-purple-500/10 dark:bg-purple-600/5 rounded-full blur-3xl pointer-events-none" />

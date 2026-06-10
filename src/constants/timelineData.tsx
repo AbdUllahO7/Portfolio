@@ -1,9 +1,47 @@
 // constants/timelineData.ts
 import { TFunction } from "i18next";
-import { Eye, Link } from "lucide-react";
+import { Eye, Link, Apple } from "lucide-react";
 import Image from "next/image";
 
 export const getTimelineData = (t: TFunction) => [
+  {
+    title: "2025",
+    content: (
+      <div>
+        <p className=" text-xs md:text-sm font-normal dark:text-white text-black">
+          {t('timeline.projects.bishola2025.description1')}
+        </p>
+        <p className=" text-xs md:text-sm font-normal mb-10">
+          {t('timeline.projects.bishola2025.description2')}
+        </p>
+        <div className="flex flex-wrap gap-4 mb-10">
+          <a href="https://bishola.com/en" target="_blank" className=" bg-green-500 hover:bg-green-600 text-white p-2 flex w-fit gap-4 rounded-lg pr-3 pl-3 items-center text-xs md:text-sm" >
+            <Eye className="w-4 h-4" />
+            {t('timeline.visitButton')}
+          </a>
+          <a href="https://play.google.com/store/search?q=bishola&c=apps" target="_blank" className=" bg-blue-600 hover:bg-blue-700 text-white p-2 flex w-fit gap-4 rounded-lg pr-3 pl-3 items-center text-xs md:text-sm" >
+            <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M3 5.277L14.773 12 3 18.723v-13.446zM15.932 11.334l2.946-1.688L3.924 3.036l12.008 8.298zm.001 1.332L3.924 20.964l14.954-6.61-2.945-1.688zm1.09-0.666l4.238-2.427a1.077 1.077 0 010 1.83l-4.238 2.427-.001-1.83z"/>
+            </svg>
+            Google Play
+          </a>
+          <a href="https://apps.apple.com/us/app/bishola/id6751427088" target="_blank" className=" bg-zinc-800 hover:bg-zinc-700 text-white p-2 flex w-fit gap-4 rounded-lg pr-3 pl-3 items-center text-xs md:text-sm" >
+            <Apple className="w-4 h-4 text-white" />
+            App Store
+          </a>
+        </div>
+        <div className="grid grid-cols-2 gap-4 mt-5">
+          <Image
+            src="/assets/images/bishola.png"
+            alt="Bishola mockup"
+            width={500}
+            height={500}
+            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+          />
+        </div>
+      </div>
+    ),
+  },
   {
     title: "2025",
     content: (

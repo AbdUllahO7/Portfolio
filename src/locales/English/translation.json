@@ -149,9 +149,35 @@
       "technologiesUsed": "Technologies Used",
       "keyFeatures": "Key Features",
       "resultsAchieved": "Results Achieved",
-      "viewLiveProject": "View Live Project"
+      "viewLiveProject": "View Live Project",
+      "viewAppStore": "App Store",
+      "viewPlayStore": "Google Play"
     },
     "projects": {
+      "bishola": {
+        "title": "Bishola - Car Sharing Ecosystem",
+        "subtitle": "Comprehensive car rental and sales platform",
+        "category": "Car Sharing / E-Commerce",
+        "duration": "6 months",
+        "team": "Founder / Lead Developer",
+        "problem": "Vehicle owners lacked a secure, unified platform to monetize their vehicles via rentals or list them for sale, while renters/buyers lacked a native, real-time car search and rental tool.",
+        "solution": "Developed a cross-platform car-sharing ecosystem comprising a NestJS API backend, Next.js web portal, and React Native mobile applications with real-time notifications, JWT role-based access, and advanced location filtering.",
+        "results": [
+          "Successfully launched web, iOS, and Android applications",
+          "Enabled seamless listing, rental, and sales workflows for vehicle owners",
+          "Implemented real-time notifications and secure payments",
+          "Optimized data querying for quick location-based vehicle searches"
+        ],
+        "features": [
+          "Car listing management for rental and sales",
+          "NestJS robust backend API with PostgreSQL",
+          "JWT Authentication & role-based permissions",
+          "Next.js web application with SSR for SEO",
+          "React Native iOS/Android apps with native performance",
+          "Advanced geolocation search and filtering",
+          "Admin dashboard for moderation and analytics"
+        ]
+      },
       "layandent": {
         "title": "LayandDent - Dental E-Commerce Platform",
         "subtitle": "Leading Saudi dental supplies company",
@@ -256,6 +282,10 @@
     "sectionDescription": "Explore my career timeline and the key projects I've worked on throughout my professional journey. Each project represents a milestone in my growth as a software engineer.",
     "visitButton": "Visit",
     "projects": {
+      "bishola2025": {
+        "description1": "Bishola Platform - A comprehensive car sharing ecosystem enabling vehicle owners to list their cars for rental or sale to other users.",
+        "description2": "Built using NestJS, Next.js, PostgreSQL, and React Native, with JWT authentication, real-time notifications, and advanced filtering."
+      },
       "layandent2025": {
         "description1": "LayandDent, A leading Saudi company in dental supplies and equipment, we strive to be the first choice for our doctors.",
         "description2": ""

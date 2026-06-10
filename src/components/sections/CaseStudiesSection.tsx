@@ -11,7 +11,8 @@ import {
   Clock, 
   TrendingUp,
   ArrowRight,
-  CheckCircle
+  CheckCircle,
+  Apple
 } from "lucide-react"
 import Image from "next/image"
 
@@ -125,15 +126,45 @@ export default function CaseStudiesSection() {
               <p className="text-lg text-gray-400 mb-4">
                 {caseStudies[selectedCase].subtitle}
               </p>
-              <a
-                href={caseStudies[selectedCase].link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`inline-flex items-center px-6 py-3 rounded-lg font-semibold bg-gradient-to-r ${caseStudies[selectedCase].color} hover:shadow-lg transition-all duration-300 group`}
-              >
-                {t('caseStudies.labels.viewLiveProject')}
-                <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </a>
+              <div className="flex flex-wrap gap-4 items-center mb-4">
+                <a
+                  href={caseStudies[selectedCase].link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`inline-flex items-center px-6 py-3 rounded-lg font-semibold bg-gradient-to-r ${caseStudies[selectedCase].color} hover:shadow-lg transition-all duration-300 group`}
+                >
+                  {t('caseStudies.labels.viewLiveProject')}
+                  <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </a>
+
+                {/* Google Play Button */}
+                {caseStudies[selectedCase].androidLink && (
+                  <a
+                    href={caseStudies[selectedCase].androidLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-5 py-3 rounded-lg font-semibold bg-black hover:bg-gray-900 text-white border border-gray-800 hover:shadow-lg transition-all duration-300 group"
+                  >
+                    <svg className="w-5 h-5 mr-2 text-green-500 fill-current" viewBox="0 0 24 24">
+                      <path d="M3 5.277L14.773 12 3 18.723v-13.446zM15.932 11.334l2.946-1.688L3.924 3.036l12.008 8.298zm.001 1.332L3.924 20.964l14.954-6.61-2.945-1.688zm1.09-0.666l4.238-2.427a1.077 1.077 0 010 1.83l-4.238 2.427-.001-1.83z"/>
+                    </svg>
+                    {t('caseStudies.labels.viewPlayStore')}
+                  </a>
+                )}
+
+                {/* Apple App Store Button */}
+                {caseStudies[selectedCase].iosLink && (
+                  <a
+                    href={caseStudies[selectedCase].iosLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-5 py-3 rounded-lg font-semibold bg-black hover:bg-gray-900 text-white border border-gray-800 hover:shadow-lg transition-all duration-300 group"
+                  >
+                    <Apple className="w-5 h-5 mr-2 text-white" />
+                    {t('caseStudies.labels.viewAppStore')}
+                  </a>
+                )}
+              </div>
             </div>
 
             {/* Challenge & Solution */}
