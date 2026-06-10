@@ -11,6 +11,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from 'react-i18next';
 import { useLanguage } from "@/context/LanguageContext";
+import emailjs from '@emailjs/browser';
+import { Download } from "lucide-react";
 
 export const HeroParallax = ({
   products,
@@ -112,6 +114,33 @@ export const Header = () => {
   const isRTL = language === 'ar' 
   const direction = isRTL ? 'rtl' : 'ltr';
 
+  const handleDownloadCV = async () => {
+    try {
+      const serviceId = 'service_rxiv2xp';
+      const templateId = 'template_ojbh4e4';
+      const publicKey = 'vdCt1pWIL72qWQ-6t';
+
+      const templateParams = {
+        from_name: "Portfolio System",
+        from_email: "system@portfolio.com",
+        company: "Portfolio Website",
+        subject: "Resume Download Alert!",
+        message: "A user has just downloaded your CV (Abdullah_Alhasan_CV.docx) from your portfolio website.",
+        project_type: "System Alert",
+        to_email: 'abdallahalhasan2@gmail.com'
+      };
+
+      await emailjs.send(
+        serviceId,
+        templateId,
+        templateParams,
+        publicKey
+      );
+    } catch (error) {
+      console.error("Failed to send CV download notification:", error);
+    }
+  };
+
   return (
     <div 
       className={`max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0 ${
@@ -157,7 +186,22 @@ export const Header = () => {
         </p>
       </motion.div>
 
-   
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.8 }}
+        className="mt-8 md:mt-10"
+      >
+        <a
+          href="/assets/Abdullah_Alhasan_CV.docx"
+          onClick={handleDownloadCV}
+          download="Abdullah_Alhasan_CV.docx"
+          className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-lg font-semibold bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-blue-500/10 hover:shadow-blue-500/20 transform hover:-translate-y-0.5"
+        >
+          <Download className="w-4.5 h-4.5" />
+          {t('hero.downloadCV')}
+        </a>
+      </motion.div>
     </div>
   );
 };
