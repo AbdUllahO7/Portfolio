@@ -75,7 +75,7 @@ export default function ProcessSection() {
         >
           {/* Desktop View - Horizontal Timeline */}
           <div className="hidden lg:block">
-            <div className="flex justify-between items-start relative">
+            <div className="flex justify-between items-stretch gap-6 relative">
               {/* Timeline Line */}
               <div className="absolute top-20 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 via-purple-500 via-green-500 via-orange-500 via-pink-500 to-indigo-500"></div>
               
@@ -83,7 +83,7 @@ export default function ProcessSection() {
                 <motion.div
                   key={index}
                   variants={item}
-                  className="relative flex-1 max-w-xs"
+                  className="relative flex-1 max-w-xs flex flex-col"
                 >
                   {/* Timeline Dot */}
                   <div className={`absolute top-16 left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-gradient-to-r ${step.color} flex items-center justify-center z-10`}>
@@ -91,7 +91,7 @@ export default function ProcessSection() {
                   </div>
 
                   {/* Card */}
-                  <div className=" backdrop-blur-sm border border-gray-800 rounded-xl p-6 mt-32  transition-all duration-300 group">
+                  <div className="flex-1 backdrop-blur-sm border border-gray-800 rounded-xl p-6 mt-32 transition-all duration-300 group flex flex-col">
                     <div className={`w-16 h-16 rounded-lg bg-gradient-to-br ${step.color} flex items-center justify-center mb-4 text-white mx-auto`}>
                       {step.icon}
                     </div>
@@ -103,7 +103,7 @@ export default function ProcessSection() {
                       {step.duration}
                     </div>
 
-                    <ul className="space-y-1">
+                    <ul className="space-y-1 mt-auto">
                       {step.details.map((detail, idx) => (
                         <li key={idx} className="text-xs  flex items-center">
                           <div className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${step.color} mr-2`}></div>
