@@ -60,7 +60,7 @@ export default function CaseStudiesSection() {
             <button
               key={study.id}
               onClick={() => setSelectedCase(index)}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+              className={`px-6 py-3 rounded-lg text-white font-semibold transition-all duration-300 ${
                 selectedCase === index
                   ? `bg-gradient-to-r ${study.color} shadow-lg`
                   : "bg-gradient-to-t from-blue-500 to-cyan-500 hover:bg-gray-700 hover:text-white"
@@ -131,7 +131,7 @@ export default function CaseStudiesSection() {
                   href={caseStudies[selectedCase].link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`inline-flex items-center px-6 py-3 rounded-lg font-semibold bg-gradient-to-r ${caseStudies[selectedCase].color} hover:shadow-lg transition-all duration-300 group`}
+                  className={`inline-flex items-center text-white px-6 py-3 rounded-lg font-semibold bg-gradient-to-r ${caseStudies[selectedCase].color} hover:shadow-lg transition-all duration-300 group`}
                 >
                   {t('caseStudies.labels.viewLiveProject')}
                   <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
