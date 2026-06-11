@@ -2,31 +2,16 @@
 
 import type React from "react"
 
-import { useState, useMemo, useEffect } from "react"
+import { useState, useMemo } from "react"
 import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
 import { useTranslation } from "react-i18next"
 import { getFeatures } from "@/constants/featuresData"
 
 export function FeaturesSectionDemo() {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
-  const [forceUpdate, setForceUpdate] = useState(0)
-
-  // Force component to re-render when language changes
-  useEffect(() => {
-    const handleLanguageChange = () => {
-      setForceUpdate(prev => prev + 1)
-    }
-
-    i18n.on('languageChanged', handleLanguageChange)
-    
-    return () => {
-      i18n.off('languageChanged', handleLanguageChange)
-    }
-  }, [i18n])
-
-  const features = useMemo(() => getFeatures(t), [t, forceUpdate, i18n.language])
+  const features = useMemo(() => getFeatures(t), [t])
 
   const container = {
     hidden: { opacity: 0 },

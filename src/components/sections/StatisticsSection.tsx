@@ -209,7 +209,7 @@ export default function StatisticsSection() {
           className="text-center mt-16 max-w-4xl mx-auto"
         >
           <blockquote className="text-xl md:text-2xl italic mb-6">
-            "{t('statistics.quote.text')}"
+            &quot;{t('statistics.quote.text')}&quot;
           </blockquote>
           <div className="flex items-center justify-center space-x-4">
             <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center font-bold">
@@ -226,8 +226,17 @@ export default function StatisticsSection() {
   )
 }
 
+interface StatItem {
+  icon: React.ReactNode;
+  number: number;
+  suffix: string;
+  label: string;
+  description: string;
+  color: string;
+}
+
 // Animated Counter Component
-const StatCard = ({ stat, index, isInView }: { stat: any, index: number, isInView: boolean }) => {
+const StatCard = ({ stat, index, isInView }: { stat: StatItem, index: number, isInView: boolean }) => {
   const [count, setCount] = useState(0)
   
   useEffect(() => {

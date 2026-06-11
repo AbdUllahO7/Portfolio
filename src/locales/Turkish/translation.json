@@ -270,6 +270,30 @@
           "Versiyon geçmişi",
           "Dışa aktarma yetenekleri"
         ]
+      },
+      "idigitek": {
+        "title": "Idigitek - Çok Dilli İYS (CMS)",
+        "subtitle": "Dinamik Çok Dilli İçerik Yönetim Sistemi",
+        "category": "SaaS Platformu / İYS",
+        "duration": "2 ay (Mart 2025 – Nisan 2025)",
+        "team": "Full Stack Geliştirici",
+        "problem": "Kullanıcı rollerine ve izinlerine göre değişiklikleri kısıtlarken, web sayfası içeriğini, düzen bloklarını ve çevirileri 10'dan fazla dilde dinamik olarak yönetmek.",
+        "solution": "Ön uç oluşturucu arayüzleri için React ve Material-UI, çok dilli senkronizasyon için i18next ve RBAC izinlerine ve MongoDB şema mantığına sahip güvenli bir Node.js/Express arka ucu kullanan kapsamlı bir İYS (CMS) oluşturuldu.",
+        "results": [
+          "Sürükle-bırak desteği ile dinamik bölüm oluşturma sağlandı",
+          "Aynı anda 10'dan fazla dilde içerik oluşturma ve çeviri desteği sunuldu",
+          "Gelişmiş Rol Tabanlı Erişim Kontrolü (RBAC) entegre edildi",
+          "Canlı içerik önizlemeleri ve yayınlama sürüm kontrol sistemi uygulandı"
+        ],
+        "features": [
+          "10'dan fazla dili destekleyen dinamik çok dilli içerik yönetimi",
+          "Ayrıntılı izinlere sahip gelişmiş Rol Tabanlı Erişim Kontrolü (RBAC)",
+          "Bölüm yönetimi (içerik bloklarını oluşturma, gizleme, çoğaltma, sıralama)",
+          "Tek bir arayüzde birden fazla dilin eşzamanlı olarak düzenlenmesi",
+          "Esnek belge depolama için ölçeklenebilir MongoDB arka uç mimarisi",
+          "Real-time içerik önizleme ve sayfa yayınlama sistemi",
+          "Duyarlı React ve Material-UI ön uç oluşturucu paneli"
+        ]
       }
     },
     "cta": {
@@ -283,6 +307,10 @@
     "sectionDescription": "Profesyonel yolculuğum boyunca çalıştığım kariyar zaman çizelgemi ve temel projeleri keşfedin. Her proje, yazılım mühendisi olarak büyümemde bir dönüm noktasını temsil ediyor.",
     "visitButton": "Ziyaret Et",
     "projects": {
+      "idigitek2025": {
+        "description1": "Idigitek İYS - Ölçeklenebilir içerik oluşturma ve sayfa düzeni oluşturma için tasarlanmış Dinamik Çok Dilli İçerik Yönetim Sistemi.",
+        "description2": "Rol Tabanlı Erişim Kontrolü (RBAC), sürükle-bırak sayfa bölümleri ve i18next çok dilli işleme özellikleriyle React, Node.js, Express ve MongoDB ile geliştirildi."
+      },
       "bishola2025": {
         "description1": "Bishola Platformu - Araç sahiplerinin araçlarını diğer kullanıcılara kiralama veya satış için listelemelerini sağlayan kapsamlı bir araç paylaşım ekosistemi.",
         "description2": "NestJS, Next.js, PostgreSQL ve React Native kullanılarak, JWT kimlik doğrulaması, gerçek zamanlı bildirimler ve gelişmiş filtreleme ile geliştirildi."

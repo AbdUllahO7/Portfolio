@@ -114,12 +114,16 @@ export const metadata: Metadata = {
   category: "technology",
   classification: "software development portfolio",
   referrer: "origin-when-cross-origin",
-  colorScheme: "dark light",
+};
+
+export const viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
     { media: "(prefers-color-scheme: dark)", color: "#000000" },
   ],
+  colorScheme: "dark light",
 };
+
 
 export default function RootLayout({
   children,

@@ -5,10 +5,11 @@ import { useTranslation } from "react-i18next"
 import { Briefcase, Calendar, MapPin, Sparkles } from "lucide-react"
 import { useMemo } from "react"
 
+const rolesKeys = ["zimam", "idigitek", "freelance"]
+
 export default function ExperienceSection() {
   const { t } = useTranslation()
 
-  const rolesKeys = ["zimam", "idigitek", "freelance"]
 
   const roles = useMemo(() => {
     return rolesKeys.map((key) => ({

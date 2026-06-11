@@ -270,6 +270,30 @@
           "Version history",
           "Export capabilities"
         ]
+      },
+      "idigitek": {
+        "title": "Idigitek - Multilingual CMS",
+        "subtitle": "Dynamic Multilingual Content Management System",
+        "category": "SaaS Platform / CMS",
+        "duration": "2 months (March 2025 – April 2025)",
+        "team": "Full Stack Developer",
+        "problem": "Managing web page content, layout blocks, and translations dynamically across 10+ languages while restricting modifications based on user roles and permissions.",
+        "solution": "Built a comprehensive CMS utilizing React and Material-UI for frontend builder interfaces, i18next for multi-language synchronization, and a secure Node.js/Express backend with RBAC permissions and MongoDB schema logic.",
+        "results": [
+          "Delivered dynamic section building with drag-and-drop support",
+          "Supported content creation and translations across 10+ languages simultaneously",
+          "Integrated fine-grained Role-Based Access Control (RBAC) protection",
+          "Implemented live content previews and publishing version control system"
+        ],
+        "features": [
+          "Dynamic multilingual content management supporting 10+ languages",
+          "Advanced Role-Based Access Control (RBAC) with granular permissions",
+          "Section management (create, hide, duplicate, order content blocks)",
+          "Simultaneous editing of multiple languages in a single interface",
+          "Scalable MongoDB backend architecture for flexible document storage",
+          "Real-time content previewing and page publication system",
+          "Responsive React & Material-UI frontend builder dashboard"
+        ]
       }
     },
     "cta": {
@@ -283,6 +307,10 @@
     "sectionDescription": "Explore my career timeline and the key projects I've worked on throughout my professional journey. Each project represents a milestone in my growth as a software engineer.",
     "visitButton": "Visit",
     "projects": {
+      "idigitek2025": {
+        "description1": "Idigitek CMS - A Dynamic Multilingual Content Management System designed for scalable content creation and page layout building.",
+        "description2": "Engineered with React, Node.js, Express, and MongoDB, featuring Role-Based Access Control (RBAC), drag-and-drop page sections, and i18next multilingual handling."
+      },
       "bishola2025": {
         "description1": "Bishola Platform - A comprehensive car sharing ecosystem enabling vehicle owners to list their cars for rental or sale to other users.",
         "description2": "Built using NestJS, Next.js, PostgreSQL, and React Native, with JWT authentication, real-time notifications, and advanced filtering."

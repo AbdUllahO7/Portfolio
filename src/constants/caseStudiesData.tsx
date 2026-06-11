@@ -84,5 +84,21 @@ export const getCaseStudies = (t: TFunction) => [
     features: t('caseStudies.projects.liveDoc.features', { returnObjects: true }) as string[],
     link: "https://live-doc-plum.vercel.app/",
     color: "from-blue-500 to-cyan-500"
+  },
+  {
+    id: 6,
+    title: t('caseStudies.projects.idigitek.title'),
+    subtitle: t('caseStudies.projects.idigitek.subtitle'),
+    image: "/assets/images/idigitek/Screenshot 2026-06-12 at 02.34.21.png",
+    category: t('caseStudies.projects.idigitek.category'),
+    duration: t('caseStudies.projects.idigitek.duration'),
+    team: t('caseStudies.projects.idigitek.team'),
+    technologies: ["React", "Node.js", "Express.js", "MongoDB", "i18next", "Role-Based Access Control (RBAC)", "RESTful API", "Material-UI"],
+    problem: t('caseStudies.projects.idigitek.problem'),
+    solution: t('caseStudies.projects.idigitek.solution'),
+    results: t('caseStudies.projects.idigitek.results', { returnObjects: true }) as string[],
+    features: t('caseStudies.projects.idigitek.features', { returnObjects: true }) as string[],
+    link: "https://www.idigitek.com/",
+    color: "from-purple-500 to-pink-600"
   }
 ];

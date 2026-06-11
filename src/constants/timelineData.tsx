@@ -9,6 +9,48 @@ export const getTimelineData = (t: TFunction) => [
     content: (
       <div>
         <p className=" text-xs md:text-sm font-normal dark:text-white text-black">
+          {t('timeline.projects.idigitek2025.description1')}
+        </p>
+        <p className=" text-xs md:text-sm font-normal mb-10">
+          {t('timeline.projects.idigitek2025.description2')}
+        </p>
+        <div className="flex flex-wrap gap-4 mb-10">
+          <a href="https://www.idigitek.com/" target="_blank" className=" bg-green-500 hover:bg-green-600 text-white p-2 flex w-fit gap-4 rounded-lg pr-3 pl-3 items-center text-xs md:text-sm" >
+            <Eye className="w-4 h-4" />
+            {t('timeline.visitButton')}
+          </a>
+        </div>
+        <div className="grid grid-cols-3 gap-4 mt-5">
+          <Image
+            src="/assets/images/idigitek/Screenshot 2026-06-12 at 02.34.21.png"
+            alt="Idigitek Dashboard"
+            width={500}
+            height={500}
+            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+          />
+          <Image
+            src="/assets/images/idigitek/Screenshot 2026-06-12 at 02.34.36.png"
+            alt="Idigitek CMS settings"
+            width={500}
+            height={500}
+            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+          />
+          <Image
+            src="/assets/images/idigitek/Screenshot 2026-06-12 at 02.35.06.png"
+            alt="Idigitek CMS preview"
+            width={500}
+            height={500}
+            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+          />
+        </div>
+      </div>
+    ),
+  },
+  {
+    title: "2025",
+    content: (
+      <div>
+        <p className=" text-xs md:text-sm font-normal dark:text-white text-black">
           {t('timeline.projects.bishola2025.description1')}
         </p>
         <p className=" text-xs md:text-sm font-normal mb-10">
