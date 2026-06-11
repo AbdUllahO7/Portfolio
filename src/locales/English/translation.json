@@ -152,7 +152,8 @@
       "resultsAchieved": "Results Achieved",
       "viewLiveProject": "View Live Project",
       "viewAppStore": "App Store",
-      "viewPlayStore": "Google Play"
+      "viewPlayStore": "Google Play",
+      "ndaProtected": "NDA Protected / Private"
     },
     "projects": {
       "bishola": {
@@ -294,6 +295,29 @@
           "Real-time content previewing and page publication system",
           "Responsive React & Material-UI frontend builder dashboard"
         ]
+      },
+      "hajjUmrah": {
+        "title": "Ministry Pilgrim Logistics Portal",
+        "subtitle": "Large-scale enterprise pilgrimage management & logistics system",
+        "category": "Government Portal / Enterprise Systems",
+        "duration": "January 2026 - Present",
+        "team": "Zimam Company (for Ministry of Hajj & Umrah)",
+        "problem": "Managing pilgrim queues, logistics, and multi-step registration forms for millions of visitors while keeping response times fast and ensuring maximum data security.",
+        "solution": "Built a robust Vue.js Single Page Application (SPA) frontend and optimized Laravel REST APIs, implementing Redis queuing engines, optimized SQL schemas, and government identity integration.",
+        "results": [
+          "Successfully processed high-concurrency requests during peak seasons",
+          "Reduced backend load using optimized Redis queues for heavy background tasks",
+          "Achieved seamless data state sync using Vue.js state management",
+          "Ensured full compliance with ministry-level data protection standards"
+        ],
+        "features": [
+          "Interactive Vue.js administration dashboards",
+          "High-throughput Laravel API endpoints",
+          "Asynchronous tasks handling via Redis & database queues",
+          "Multi-step secure registration & filtering workflows",
+          "Government unified national auth (IAM) integration",
+          "Advanced database indexing & query optimization"
+        ]
       }
     },
     "cta": {
@@ -307,6 +331,10 @@
     "sectionDescription": "Explore my career timeline and the key projects I've worked on throughout my professional journey. Each project represents a milestone in my growth as a software engineer.",
     "visitButton": "Visit",
     "projects": {
+      "hajjUmrah2026": {
+        "description1": "Ministry Pilgrim Logistics Portal - An enterprise platform designed for the Saudi Ministry of Hajj and Umrah (وزارة الحج والعمرة) through Zimam Company.",
+        "description2": "Developed using Vue.js for high-speed frontend dashboards, and Laravel for secure APIs and queue worker processes."
+      },
       "idigitek2025": {
         "description1": "Idigitek CMS - A Dynamic Multilingual Content Management System designed for scalable content creation and page layout building.",
         "description2": "Engineered with React, Node.js, Express, and MongoDB, featuring Role-Based Access Control (RBAC), drag-and-drop page sections, and i18next multilingual handling."
@@ -353,11 +381,11 @@
           "type": "Remote",
           "duration": "January 2026 - Present",
           "bullets": [
-            "Design and develop full-stack web applications using modern JavaScript frameworks and backend technologies",
-            "Build and maintain scalable RESTful APIs and integrate third-party services to support business requirements",
-            "Implement responsive and accessible frontend interfaces using React and TypeScript",
-            "Collaborate with cross-functional teams to deliver high-quality software solutions on schedule",
-            "Participate in code reviews and contribute to technical documentation and best practices"
+            "Architected and engineered a large-scale enterprise Pilgrim Management & Logistics Portal for the Saudi Ministry of Hajj and Umrah (وزارة الحج والعمرة) using Vue.js for the frontend and Laravel for the backend.",
+            "Built secure, optimized RESTful APIs and background job queues (Redis) in Laravel to handle high-concurrency requests and asynchronous tasks under heavy load.",
+            "Developed a highly interactive SPA (Single Page Application) frontend with Vue.js, dynamic data tables, wizard-like registration flows, and multi-language support.",
+            "Collaborated with team leads to design database schemas (MySQL/PostgreSQL), implementing indexing and query optimizations to process thousands of pilgrim profiles efficiently.",
+            "Integrated government authentication APIs and SMS notification gateways, ensuring full compliance with security policies and performance standards."
           ]
         },
         "idigitek": {

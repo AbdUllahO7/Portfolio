@@ -5,6 +5,34 @@ import Image from "next/image";
 
 export const getTimelineData = (t: TFunction) => [
   {
+    title: "2026",
+    content: (
+      <div>
+        <p className=" text-xs md:text-sm font-normal dark:text-white text-black">
+          {t('timeline.projects.hajjUmrah2026.description1')}
+        </p>
+        <p className=" text-xs md:text-sm font-normal mb-10">
+          {t('timeline.projects.hajjUmrah2026.description2')}
+        </p>
+        <div className="flex flex-wrap gap-4 mb-10">
+          <span className=" bg-zinc-800 text-gray-300 p-2 flex w-fit gap-2 rounded-lg pr-3 pl-3 items-center text-xs md:text-sm select-none cursor-default" >
+            <span>🔒</span>
+            {t('caseStudies.labels.ndaProtected')}
+          </span>
+        </div>
+        <div className="grid grid-cols-1 gap-4 mt-5">
+          <Image
+            src="/assets/images/hajj-umrah/architecture.png"
+            alt="Pilgrim Management Architecture"
+            width={800}
+            height={500}
+            className="rounded-lg object-cover h-40 md:h-80 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+          />
+        </div>
+      </div>
+    ),
+  },
+  {
     title: "2025",
     content: (
       <div>

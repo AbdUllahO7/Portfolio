@@ -39,6 +39,23 @@ export const getCaseStudies = (t: TFunction) => [
   },
   {
     id: 3,
+    title: t('caseStudies.projects.hajjUmrah.title'),
+    subtitle: t('caseStudies.projects.hajjUmrah.subtitle'),
+    image: "/assets/images/hajj-umrah/architecture.png",
+    category: t('caseStudies.projects.hajjUmrah.category'),
+    duration: t('caseStudies.projects.hajjUmrah.duration'),
+    team: t('caseStudies.projects.hajjUmrah.team'),
+    technologies: ["Laravel", "Vue.js", "MySQL", "Redis Queues", "Tailwind CSS", "Bootstrap"],
+    problem: t('caseStudies.projects.hajjUmrah.problem'),
+    solution: t('caseStudies.projects.hajjUmrah.solution'),
+    results: t('caseStudies.projects.hajjUmrah.results', { returnObjects: true }) as string[],
+    features: t('caseStudies.projects.hajjUmrah.features', { returnObjects: true }) as string[],
+    link: "#-nda",
+    isNDA: true,
+    color: "from-emerald-600 to-teal-500"
+  },
+  {
+    id: 4,
     title: t('caseStudies.projects.layandent.title'),
     subtitle: t('caseStudies.projects.layandent.subtitle'),
     image: "/assets/images/Layan/Layan-1.png",
@@ -54,7 +71,7 @@ export const getCaseStudies = (t: TFunction) => [
     color: "from-blue-500 to-cyan-500"
   },
   {
-    id: 4,
+    id: 5,
     title: t('caseStudies.projects.amwall.title'),
     subtitle: t('caseStudies.projects.amwall.subtitle'),
     image: "/assets/images/Amwall/Amwall-1.png",
@@ -70,7 +87,7 @@ export const getCaseStudies = (t: TFunction) => [
     color: "from-blue-500 to-cyan-500"
   },
   {
-    id: 5,
+    id: 6,
     title: t('caseStudies.projects.storeIt.title'),
     subtitle: t('caseStudies.projects.storeIt.subtitle'),
     image: "/assets/images/storeIt.png",
@@ -86,7 +103,7 @@ export const getCaseStudies = (t: TFunction) => [
     color: "from-blue-500 to-cyan-500"
   },
   {
-    id: 6,
+    id: 7,
     title: t('caseStudies.projects.liveDoc.title'),
     subtitle: t('caseStudies.projects.liveDoc.subtitle'),
     image: "/assets/images/LiveDoc/live-doc-1.png",

@@ -127,15 +127,24 @@ export default function CaseStudiesSection() {
                 {caseStudies[selectedCase].subtitle}
               </p>
               <div className="flex flex-wrap gap-4 items-center mb-4">
-                <a
-                  href={caseStudies[selectedCase].link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`inline-flex items-center text-white px-6 py-3 rounded-lg font-semibold bg-gradient-to-r ${caseStudies[selectedCase].color} hover:shadow-lg transition-all duration-300 group`}
-                >
-                  {t('caseStudies.labels.viewLiveProject')}
-                  <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </a>
+                {caseStudies[selectedCase].isNDA ? (
+                  <span
+                    className={`inline-flex items-center text-white px-6 py-3 rounded-lg font-semibold bg-gradient-to-r ${caseStudies[selectedCase].color} cursor-default select-none`}
+                  >
+                    <span className="mr-2">🔒</span>
+                    {t('caseStudies.labels.ndaProtected')}
+                  </span>
+                ) : (
+                  <a
+                    href={caseStudies[selectedCase].link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`inline-flex items-center text-white px-6 py-3 rounded-lg font-semibold bg-gradient-to-r ${caseStudies[selectedCase].color} hover:shadow-lg transition-all duration-300 group`}
+                  >
+                    {t('caseStudies.labels.viewLiveProject')}
+                    <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </a>
+                )}
 
                 {/* Google Play Button */}
                 {caseStudies[selectedCase].androidLink && (

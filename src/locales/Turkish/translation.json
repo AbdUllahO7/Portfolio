@@ -152,7 +152,8 @@
       "resultsAchieved": "Elde Edilen Sonuçlar",
       "viewLiveProject": "Canlı Projeyi Görüntüle",
       "viewAppStore": "App Store",
-      "viewPlayStore": "Google Play"
+      "viewPlayStore": "Google Play",
+      "ndaProtected": "Gizlilik Sözleşmeli (NDA) / Özel Proje"
     },
     "projects": {
       "bishola": {
@@ -294,6 +295,29 @@
           "Real-time içerik önizleme ve sayfa yayınlama sistemi",
           "Duyarlı React ve Material-UI ön uç oluşturucu paneli"
         ]
+      },
+      "hajjUmrah": {
+        "title": "Hac ve Umre Lojistik Portalı",
+        "subtitle": "Büyük ölçekli hacı yönetimi ve lojistik kurumsal sistemi",
+        "category": "Devlet Portalı / Kurumsal Sistemler",
+        "duration": "Ocak 2026 - Günümüz",
+        "team": "Zimam Company (Hac ve Umre Bakanlığı için)",
+        "problem": "Milyonlarca ziyaretçi için hacı kuyruklarını, lojistik süreçlerini ve çok adımlı kayıt formlarını yönetirken sistem yanıt sürelerini hızlı tutmak ve veri güvenliğini en üst düzeyde sağlamak.",
+        "solution": "Vue.js kullanarak yüksek performanslı tek sayfa uygulaması (SPA) ön yüzü geliştirmek; Redis kuyruk yapıları, optimize edilmiş SQL şemaları ve ulusal kimlik entegrasyonu ile Laravel arka uç API'lerini güçlendirmek.",
+        "results": [
+          "Yoğun dönemlerde (hac sezonu) yüksek eşzamanlı istekler başarıyla işlendi",
+          "Ağır arka plan işleri için Redis kuyrukları kullanılarak sunucu yükü azaltıldı",
+          "Vue.js durum yönetimi ile kesintisiz veri durumu senkronizasyonu sağlandı",
+          "Bakanlık düzeyindeki veri koruma standartlarına tam uyum sağlandı"
+        ],
+        "features": [
+          "Vue.js ile geliştirilmiş etkileşimli yönetim panelleri",
+          "Yüksek işlem kapasiteli Laravel API uç noktaları",
+          "Redis ve veri tabanı kuyrukları aracılığıyla asenkron iş yönetimi",
+          "Çok adımlı güvenli kayıt ve filtreleme iş akışları",
+          "Ulusal kimlik doğrulama entegrasyonu",
+          "Gelişmiş veri tabanı indeksleme ve sorgu optimizasyonu"
+        ]
       }
     },
     "cta": {
@@ -307,6 +331,10 @@
     "sectionDescription": "Profesyonel yolculuğum boyunca çalıştığım kariyar zaman çizelgemi ve temel projeleri keşfedin. Her proje, yazılım mühendisi olarak büyümemde bir dönüm noktasını temsil ediyor.",
     "visitButton": "Ziyaret Et",
     "projects": {
+      "hajjUmrah2026": {
+        "description1": "Hac ve Umre Lojistik Portalı - Suudi Arabistan Hac ve Umre Bakanlığı (وزارة الحج والعمرة) için Zimam Company bünyesinde geliştirilmiş kurumsal platform.",
+        "description2": "Ön yüzde yüksek hızlı paneller için Vue.js, güvenli API'ler ve kuyruk işlemleri için ise Laravel kullanılarak geliştirilmiştir."
+      },
       "idigitek2025": {
         "description1": "Idigitek İYS - Ölçeklenebilir içerik oluşturma ve sayfa düzeni oluşturma için tasarlanmış Dinamik Çok Dilli İçerik Yönetim Sistemi.",
         "description2": "Rol Tabanlı Erişim Kontrolü (RBAC), sürükle-bırak sayfa bölümleri ve i18next çok dilli işleme özellikleriyle React, Node.js, Express ve MongoDB ile geliştirildi."
@@ -615,11 +643,11 @@
         "type": "Uzaktan (Remote)",
         "duration": "Ocak 2026 - Günümüz",
         "bullets": [
-          "Modern JavaScript çerçeveleri ve arka uç teknolojilerini kullanarak tam yığın (full-stack) web uygulamaları tasarlamak ve geliştirmek",
-          "İş gereksinimlerini desteklemek için ölçeklenebilir RESTful API'ler oluşturmak, bakımını yapmak ve üçüncü taraf hizmetleri entegre etmek",
-          "React ve TypeScript kullanarak duyarlı (responsive) ve erişilebilir ön uç arayüzleri uygulamak",
-          "Yüksek kaliteli yazılım çözümlerini zamanında teslim etmek için çapraz işlevli ekiplerle iş birliği yapmak",
-          "Kod incelemelerine katılmak, teknik belgelere ve en iyi uygulamalara katkıda bulunmak"
+          "Suudi Arabistan Hac ve Umre Bakanlığı (وزارة الحج والعمرة) için Vue.js (ön uç) ve Laravel (arka uç) kullanarak büyük ölçekli kurumsal Hac Yönetim ve Lojistik Portalı mimarisini tasarlamak ve geliştirmek.",
+          "Yüksek eşzamanlı istekleri ve arka plan işlemlerini (asenkron görevler) yüksek yük altında verimli yönetmek amacıyla Laravel Redis kuyruk sistemleri ve optimize edilmiş güvenli RESTful API'ler oluşturmak.",
+          "Vue.js kullanarak dinamik veri tabloları, çok adımlı başvuru formları ve çoklu dil desteği içeren son derece etkileşimli SPA (Tek Sayfa Uygulaması) ön yüzleri geliştirmek.",
+          "Binlerce hacı adayının profil verilerini hızlı işlemek için veri tabanı (MySQL/PostgreSQL) şemalarını tasarlamak, indeksleme ve sorgu optimizasyonlarını gerçekleştirmek.",
+          "Güvenlik politikalarına ve performans standartlarına tam uyumlu olarak devlet doğrulama servislerini ve SMS bildirim ağ geçitlerini entegre etmek."
         ]
       },
       "idigitek": {
