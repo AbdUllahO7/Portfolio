@@ -193,9 +193,9 @@ export const Header = () => {
         className="mt-8 md:mt-10"
       >
         <a
-          href="/assets/Abdullah_Alhasan_CV.docx"
+          href="/assets/Abdullah_Alhasan_CV.pdf"
           onClick={handleDownloadCV}
-          download="Abdullah_Alhasan_CV.docx"
+          download="Abdullah_Alhasan_CV.pdf"
           className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-lg font-semibold bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-blue-500/10 hover:shadow-blue-500/20 transform hover:-translate-y-0.5"
         >
           <Download className="w-4.5 h-4.5" />
